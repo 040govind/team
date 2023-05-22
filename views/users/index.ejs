@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+	<title>NITT ONLINE</title>
+	<meta name="desciption" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script>
+		$(window).on('scroll', function(){
+  			if($(window).scrollTop()){
+  			  $('nav').addClass('black');
+ 			 }else {
+ 		   $('nav').removeClass('black');
+ 		 }
+		})
+	</script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+	<header id="header">
+		<nav>
+			<div class="logo"><img src="images/icon/logo.png" alt="logo"></div>
+			<ul>
+				<li><a class="active" href="/">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="team.html">Team</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="blog.html">Blogs</a></li>
+			</ul>
+			<% if(typeof message !=='undefined'){ %>
+				<a class="get-started" href=""><%= message %></a>
+				<a class="get-started" href="">Logout</a>
+			  <% } else{ %>  
+				<a class="get-started" href="login">Register</a>
+			 <% } %>
+			
+			
+		
+			<img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+		</nav>
+			
+	
+		<div class="side-menu" id="side-menu">
+			<div class="close" onclick="sideMenu(1)"><img src="images/icon/close.png" alt=""></div>
+			<div class="user">
+				<img src="images/creator/alphonse_sir.png" alt="Username">
+				<p>user</p>
+			</div>
+			<ul>
+				<li><a href="about.html">About</a></li>
+				<li><a href="#portfolio_section">Portfolio</a></li>
+				<li><a href="#team_section">Team</a></li>
+				<li><a href="#services_section">Services</a></li>
+				<li><a href="#contactus_section">Contact</a></li>
+				<li><a href="#feedBACK">Feedback</a></li>
+			</ul>
+		</div>
+	</header>
+			
+		
+<!-- Sliding Information -->
+	<marquee style="background: linear-gradient(to right, #FA4B37, #DF2771); margin-top: 120px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="10"><div class="marqu">The National Institute of Technology Tiruchirappalli, (NITT or NIT Trichy), formerly known as Regional Engineering College, Tiruchirappalli, is a technical institute of national importance governed by the NIT Act passed by the Parliament of India. It was established in 1964. In 2003, the institution was granted “Deemed to be University” status and then it was renamed as the National Institute of Technology Tiruchirappalli. The National Institute of Technology Tiruchirappalli stands at 8th position with the score of 69.17  in Engineering subject in India Rankings 2022. The National Institute of Technology Trichy retained 9th position in Engineering subject of the India Rankings for two consecutive years in 2020 and 2021. NIT Trichy was ranked between 10th and 12th positions in Engineering subject of India Rankings from 2016 to 2019.</div></marquee>
+	
+		<div class="head-container">
+		
+			<div class="quote">
+               
+                <h1 style="min-height: 80px; ">
+					<a href="" class="typewrite"style="font-size: larger; font-weight: bold; font-family: 'Times New Roman', Times, serif;" data-period="100" data-type='[ "National Institute Of Technology Tiruchirappalli","Launching for the First Time ","Online Courses" ]'>
+					  <span class="wrap"></span>
+					</a>
+				</h1>
+				<h5>The National Institute of Technology Tiruchirappalli, (NITT or NIT Trichy), formerly known as Regional Engineering College, Tiruchirappalli, is a technical institute of national importance governed by the NIT Act passed by the Parliament of India. It was established in 1964. In 2003, the institution was granted “Deemed to be University” status and then it was renamed as the National Institute of Technology Tiruchirappalli.</h5>
+				
+			</div>
+
+			<div class="svg-image">
+				<img src="images/extra/adminblock.jpg" alt="svg">
+			</div>
+		</div>
+		<div class="side-menu" id="side-menu">
+			<div class="close" onclick="sideMenu(1)"><img src="images/icon/close.png" alt=""></div>
+			<div class="user">
+				<!-- <img src="images/creator/roshan.jpeg" alt="Username"> -->
+				<p>user</p>
+			</div>
+			<ul>
+				<li><a href="#about_section">About</a></li>
+				<li><a href="#portfolio_section">Portfolio</a></li>
+				<li><a href="#team_section">Team</a></li>
+				<li><a href="#services_section">Services</a></li>
+				<li><a href="#contactus_section">Contact</a></li>
+				<li><a href="#feedBACK">Feedback</a></li>
+			</ul>
+		</div>
+	</header>
+
+
+
+<!-- FEEDBACK -->
+	<div class="title2" id="feedBACK">
+		<span>Give Feedback</span>
+		<div class="shortdesc2">
+			<p>Please share your valuable feedback to us</p>
+		</div>
+	</div>
+
+	<div class="feedbox">
+		<div class="feed">
+			<form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
+				<label>Your Name</label><br>
+				<input type="text" name="" class="fname" required="required"><br>
+				<label>Email</label><br>
+				<input type="email" name="mail" required="required"><br>
+				<label>Additional Details</label><br>
+				<textarea name="addtional"></textarea><br>
+				<button type="submit" id="csubmit">Send Message</button>
+			</form>
+		</div>
+	</div>
+
+<!-- FOOTER -->
+	<footer>
+		<div class="footer-container">
+			<div class="left-col">
+				<img src="images/icon/logo1.png" style="width: 200px;">
+				<div class="logo"></div>
+				
+				<p class="rights-text">Copyright © 2021 Created by team under Alphonse Sir. </p>
+				<br><p><img src="images/icon/location.png"> National Institute of Technology<br>Tiruchirappalli,Tamil Nadu INDIA</p><br>
+				<p><img src="images/icon/phone.png"> 
+					Fax: +91-431-2500133<br></p>
+			</div>
+			<div class="right-col">
+				<h1 style="color: #fff">Online Courses</h1>
+				<div class="border"></div><br>
+				<p>We innovate Learning Processes.</p>
+				
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>

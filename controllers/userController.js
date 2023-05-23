@@ -3,7 +3,8 @@ const bcrypt = require('bcrypt');
 const emailValidator = require('deep-email-validator');
 const nodemailer = require('nodemailer');
 const randomString = require("randomstring");
-const config = require('../confic/config')
+const config = require('../confic/config');
+const session = require('express-session');
 //user_route.use(express.static(path.join(__dirname, 'public')));
 //PASWORD ENCRYPTION DECRYPTION
 
@@ -270,12 +271,25 @@ const forgetPasswordLoad = async(req,res)=>{
         const tokendata= await User.findOne({token:token});
 
         if(tokendata){
-          res.render('forget-password',{user_id:tokendata,_id});
+          res.render('forget-password',{user_id:tokendata._id});
         }
         else{
            res.render('404',{message:"Token is invalid"}); 
         }
 
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+const resetPassword = async(req,res)=>{
+    try {
+        const  password=req.body.password;
+        const userid= req.body.user_id;
+
+        const secure_pass = await securePassword(password);
+        const userdata = await User.findByIdAndUpdate({_id:userid},{$set:{passwor:secure_pass,token:''}});
+        res.redirect('/');
     } catch (error) {
         console.log(error.message);
     }
@@ -291,5 +305,6 @@ module.exports = {
     userLogout,
     forgetLoad,
     forgetVerify,
-    forgetPasswordLoad
+    forgetPasswordLoad,
+    resetPassword
 }

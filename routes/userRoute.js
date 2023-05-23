@@ -12,7 +12,10 @@ user_route.use(bodyParser.json());
 user_route.use(bodyParser.urlencoded({extended:true}));
 user_route.use(express.static(path.join(__dirname, 'public')));
 user_route.use(express.static('public/css'));
-user_route.use(session({secret:config.sessionSecret}));
+user_route.use(session({
+    resave:true,
+    saveUninitialized:true,
+    secret:config.sessionSecret}));
 
 //REQUIRE THE USER CONTROLLER
 const userController = require('../controllers/userController');
@@ -40,4 +43,5 @@ user_route.get('/logout',auth.isLogin,userController.userLogout);
 //FORGET PASSWORD
 user_route.get('/forget',auth.isLogout,userController.forgetLoad);
 user_route.post('/forget',userController.forgetVerify);
-user_route.get('/forget-password',auth.isLogout,userController.forgetPasswordLoad)
+user_route.get('/forget-password',auth.isLogout,userController.forgetPasswordLoad);
+user_route.post('/forget-password',userController. resetPassword);

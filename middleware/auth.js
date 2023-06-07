@@ -1,9 +1,11 @@
-
+const User =require('../models/userModel');
 const isLogin = async(req,res,next)=>{
     try {
         
         if(req.session.user_id){
-          res.render('/',{message:req.session.user_id});
+            const data = await User.findOne({_id:req.session.user_id});
+
+          res.render('/',{message:data.name});
         }
         else{
               res.redirect('/');
@@ -21,7 +23,9 @@ const isLogout = async(req,res,next)=>{
 
         if(req.session.user_id)
         {
-            res.render('index',{message:req.session.user_id});
+            const data = await User.findOne({_id:req.session.user_id});
+
+            res.render('index',{message:data.name});
         }
         next();
     } catch (error) {

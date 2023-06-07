@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table Example</title>
+  <link rel="stylesheet" type="text/css" href="css/courseStyle.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="script.js"></script>
+  <script>
+		$(window).on('scroll', function(){
+  			if($(window).scrollTop()){
+  			  $('nav').addClass('black');
+ 			 }else {
+ 		   $('nav').removeClass('black');
+ 		 }
+		})
+	</script>
+</head>
+<body>
+  <header id="header">
+		<nav>
+			<div class="logo"><img src="images/icon/logo.png" alt="logo"></div>
+			<ul>
+				<li><a href="/" >Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="course.html">Team</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="contact.html">Contact</a></li>
+        <li><a class="active">Coures</a></li>
+				<li><a href="blog.html">Blogs</a></li>
+			</ul>
+			<!-- <a class="get-started" href="login">Register</a> -->
+			<img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+		</nav>
+		
+				
+	
+		<div class="side-menu" id="side-menu">
+			<div class="close" onclick="sideMenu(1)"><img src="images/icon/close.png" alt=""></div>
+			<div class="user">
+				<!-- <img src="images/creator/roshan.jpeg" alt="Username"> -->
+				<p>user</p>
+			</div>
+			<ul>
+				<li><a href="about.html">About</a></li>
+				<li><a href="#portfolio_section">Portfolio</a></li>
+				<li><a href="#team_section">Team</a></li>
+				<li><a href="#services_section">Services</a></li>
+				<li><a href="#contactus_section">Contact</a></li>
+				<li><a href="#feedBACK">Feedback</a></li>
+			</ul>
+		</div>
+	</header>
+  <table id="myTable">
+    <thead>
+      <tr>
+        <th>Subject Code</th>
+        <th>Course Title</th>
+        <th>L</th>
+        <th>T</th>
+        <th>P</th>
+        <th>Credits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="subjects/ct600.html">CT600</a></td>
+        <td><a href="subjects/ct600.html">Data Structures and Algorithms (mandatory for non-Computer Science candidates)</a></td>
+        <td>2</td>
+        <td>1</td>
+        <td>0</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td style="text-align: center;"><b>Group I</b></td></tr>
+      <tr>
+        <td><a href="subjects/ct601.html">CT601</a></td>
+        <td><a href="subjects/ct601.html">Mathematical foundations of AI and DS</a></td>
+        <td>2</td>
+        <td>1</td>
+        <td>0</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct603.html">CT603</a></td>
+        <td><a href="subjects/ct603.html">Artificial Intelligence</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct605.html">CT605</a></td>
+        <td><a href="subjects/ct605.html">Data Mining Techniques</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct607.html">CT607</a></td>
+        <td><a href="subjects/ct607.html">Introduction to Data Science</a></td>
+        <td>3</td>
+        <td>0</td>
+        <td>2</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td><a href="#pool-A">CT6AX</a></td>
+        <td><a href="#pool-A">Elective -1 (Pool-A)</a></td>
+        <td>3</td>
+        <td>0</td>
+        <td>0</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Total</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>16 Credits</td>
+      </tr>
+    </tbody>
+  </table>
+<br>
+<br>
+
+  <table id="pool-A">
+    <caption><h3>Pool-A Elective</h3></caption>
+    <thead>
+      <tr>
+        <th>Subject Code</th>
+        <th>Course Title</th>
+        <th>L</th>
+        <th>T</th>
+        <th>P</th>
+        <th>Credits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="subjects/ct6A1.html">CT6A1</a></td>
+        <td><a href="subjects/ct6A1.html">Human Resource Analytics</a> </td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct6A2.html">CT6A2</a></td>
+        <td><a href="subjects/ct6A2.html">Data Visualization</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct6A3.html">CT6A3</a></td>
+        <td><a href="subjects/ct6A3.html">Optimization Techniques</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      
+    </tbody>
+  </table>
+<br>
+<br>
+  <table id="Group-II">
+    <caption><h3>Group II</h3></caption>
+    <thead>
+      <tr>
+        <th>Subject Code</th>
+        <th>Course Title</th>
+        <th>L</th>
+        <th>T</th>
+        <th>P</th>
+        <th>Credits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="subjects/ct610.html">CT610</a></td>
+        <td><a href="subjects/ct610.html"> Big Data Analytics</a></td>
+        <td>3</td>
+        <td>0</td>
+        <td>0</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct612.html">CT612</a></td>
+        <td><a href="subjects/ct612.html">Machine Learning Techniques</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct614.html">CT614</a></td>
+        <td><a href="subjects/ct614.html">Deep Learning Techniques</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="#Pool-B">CT6BX</a></td>
+        <td><a href="#Pool-B">Elective-2 <b>(Pool-B)</b></a></td>
+        <td>3</td>
+        <td>0</td>
+        <td>0</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="#Pool-B">CT6BX</a></td>
+        <td><a href="#Pool-B">Elective-3 <b>(Pool-B)</b></a></td>
+        <td>3</td>
+        <td>0</td>
+        <td>0</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>CT6P1</td>
+        <td>Project - I </td>
+        <td>0</td>
+        <td>0</td>
+        <td>4</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        
+        <td></td>
+        <td>Total</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>17 Credits</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+  <table id="Pool-B">
+    <caption><h3>Pool-B Electives</h3></caption>
+    <thead>
+      <tr>
+        <th>Subject Code</th>
+        <th>Course Title</th>
+        <th>L</th>
+        <th>T</th>
+        <th>P</th>
+        <th>Credits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="subjects/ct6B1.html">CT6B1</a></td>
+        <td><a href="subjects/ct6B1.html">Cognitive Computing</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct6B2.html">CT6B2</a></td>
+        <td><a href="subjects/ct6B2.html">Computer Vision</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct6B3.html">CT6B3</a></td>
+        <td><a href="subjects/ct6B3.html">Cloud and Edge Computing</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct6B4.html">CT6B4</a></td>
+        <td><a href="subjects/ct6B4.html">Speech, Image and Video analytics</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct6B5.html">CT6B5</a></td>
+        <td><a href="subjects/ct6B5.html">Blockchain Technology</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct6B6.html">CT6B6</a></td>
+        <td><a href="subjects/ct6B6.html">Supply Chain Analytics</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+  <table id="Group-III">
+    <caption><h3>Group-III</h3></caption>
+    <thead>
+      <tr>
+        <th>Subject Code</th>
+        <th>Course Title</th>
+        <th>L</th>
+        <th>T</th>
+        <th>P</th>
+        <th>Credits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="subjects/ct621.html">CT621</a></td>
+        <td><a href="subjects/ct621.html">Natural Language Processing</a></td>
+        <td>3</td>
+        <td>0</td>
+        <td>2</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td><a href="#Pool-C">CT6CX</a></td>
+        <td><a href="#Pool-C">Elective -4 (Pool C) </a></td>
+        <td>3</td>
+        <td>0</td>
+        <td>0</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="#Pool-C">CT6CX</a></td>
+        <td><a href="#Pool-C">Elective -5 (Pool C) </a></td>
+        <td>3</td>
+        <td>0</td>
+        <td>0</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="#Pool-C">CT6CX</a></td>
+        <td><a href="#Pool-C">Elective -6 (Pool C) </a></td>
+        <td>3</td>
+        <td>0</td>
+        <td>0</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>CT6P2</td>
+        <td>Project -II</td>
+        <td>-</td>
+        <td>-</td>
+        <td>12</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Total</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>19 Credits</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <br>
+  <br>
+  <table id="Group-IV">
+    <caption><h3>Group-IV</h3></caption>
+    <thead>
+      <tr>
+        <th>Subject Code</th>
+        <th>Course Title</th>
+        <th>L</th>
+        <th>T</th>
+        <th>P</th>
+        <th>Credits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>CT6P3</td>
+        <td>Project -III</td>
+        <td>-</td>
+        <td>-</td>
+        <td>24</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Total</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>12 Credits</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+  <h2 style="text-align: center;color:red;">PROGRAMME ELECTIVES OF AI & DS</h2>
+  <table id="Pool-C">
+    <caption><h3>Pool-C Electives</h3></caption>
+    <thead>
+      <tr>
+        <th>Subject Code</th>
+        <th>Course Title</th>
+        <th>L</th>
+        <th>T</th>
+        <th>P</th>
+        <th>Credits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="subjects/ct6C1.html">CT6C1</a></td>
+        <td><a href="subjects/ct6C1.html">High Dimensional Data Analytics</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct6C2.html">CT6C2</a></td>
+        <td><a href="subjects/ct6C2.html">Bio-Inspired Computing</a> </td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct6C3.html">CT6C3</a></td>
+        <td><a href="subjects/ct6C3.html">Federated Learning</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct6C4.html">CT6C4</a></td>
+        <td><a href="subjects/ct6C4.html">Data Privacy and Security</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct6C5.html">CT6C5</a></td>
+        <td><a href="subjects/ct6C5.html">Social Network Analysis</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><a href="subjects/ct6C6.html">CT6C6</a></td>
+        <td><a href="subjects/ct6C6.html">Analytics for Strategic Market Planning</a></td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+  </table>
+  <br><br>
+  <h3 style="text-align: center;">Notation: L-Lecture, T-Tutorial, P-Practical, C-Credits
+</h3>
+
+
+<br><br><br><br><br>
+<h1>MULTIPLE ENTRIES</h1>
+<h2>A. Certification in Artificial Intelligence and Data Science (AI and DS)</h2>
+<br>Minimum credits to be earned: [16 Credits]
+<br>Duration: Six months
+<br>Eligibility Criteria: Any one of BE/BTech (approved by Senate) or MSc or MCA
+<br><br>
+
+<h2>B. Advanced Post-graduate Diploma in AI and DS</h2>
+<br>Minimum credits to be earned: [33 Credits]
+<br>Duration: 12-24 months
+<br>Eligibility Criteria: : Certification in AI and DS
+<br><br>
+
+<h2>C. M.Tech.(AI and DS)</h2>
+<br>Minimum credits to be earned: [64 Credits]
+<br>Duration: 24-48 months
+<br>Eligibility Criteria: :  Advanced Post-graduate Diploma in AI and DS
+<br><br><br><br><br>
+
+
+<h1>MULTIPLE EXITS</h1>
+<ul>
+    <li>On completing group - I courses with eligibility criteria and duration satisfied 
+        <b>Certification in AI and DS</b> can be awarded.
+    </li>
+    <br>
+    <li>
+        On completing group - II courses with eligibility criteria and duration satisfied 
+        <b>Advanced Post Graduate Diploma in AI and DS</b> can be awarded.
+    </li>
+    <br>
+    <li>On completing group - III and IV courses with eligibility criteria and duration 
+        satisfied <b>M.Tech AI and DS</b> can be awarded.
+    </li>
+    <br>
+</ul>
+
+<br><br><br><br><br>
+<h3>The number of courses handled by each department is given below:</h3>
+<table>
+    <thead>
+        <tr>
+          <th>Department Name</th>
+          <th>Program Core</th>
+          <th>Electives</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>COMPUTER APPLICATIONS</b></td>
+          <td>5 Papers</td>
+          <td>7 Papers</td>
+        </tr>
+        <tr>
+            <td><b>COMPUTER SCIENCE AND
+                ENGINEERING </b></td>
+            <td>2 Paper</td>
+            <td>5 Papers</td>
+          </tr>
+
+        <tr>
+            <td><b>MANAGEMENT STUDIES </b></td>
+            <td>1 Paper</td>
+            <td>3 Papers</td>
+          </tr>
+      </tbody>
+</table>
+
+<br><br>
+<ul>
+    <li>External experts(from other reputed organizations or industries) can be included in
+        handling the Courses</li>
+    <br>
+    <li>Mentors for the Project component will be from all three departments and other 
+        organizations or industries. 
+        </li>
+</ul>
+
+<footer>
+  <div class="footer-container">
+      <div class="left-col">
+          <img src="images/icon/logo1.png" style="width: 200px;">
+          <div class="logo"></div>
+          
+          <p class="rights-text">Copyright © 2021 Created by team under Alphonse Sir. </p>
+          <br><p><img src="images/icon/location.png"> National Institute of Technology<br>Tiruchirappalli,Tamil Nadu INDIA</p><br>
+          <p><img src="images/icon/phone.png"> 
+              Fax: +91-431-2500133<br></p>
+      </div>
+      <div class="right-col">
+          <h1 style="color: #fff">Online Courses</h1>
+          <div class="border"></div><br>
+          <p>We innovate Learning Processes.</p>
+          
+      </div>
+  </div>
+</footer>
+</body>
+</html>

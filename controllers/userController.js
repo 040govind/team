@@ -32,7 +32,7 @@ const sendVerifyMail = async (name, email, user_id) => {
         const mailTransporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: config.mailUser,
+                user: config.emailUser,
                 pass: config.emailPassword,
             },
             tls: {

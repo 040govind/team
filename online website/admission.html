@@ -12,7 +12,7 @@
       }
 
       .container {
-        max-width: 600px;
+        /* max-width: 600px; */
         margin: 0 auto;
         padding: 20px;
       }
@@ -75,6 +75,35 @@
         width: auto;
         height: auto;
       }
+      body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    color: #666;
+  }
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+label {
+  display: block;
+  margin-top: 10px;
+}
+input[type="file"] {
+  margin-top: 5px;
+}
+button {
+  margin-top: 10px;
+}
+.error {
+  color: red;
+  margin-top: 5px;
+}
+
     </style>
 
     <script>
@@ -84,6 +113,71 @@
         textareaWrapper.style.display =
           selectBox.value === "others" ? "block" : "none";
       }
+
+      const submitButton = document.getElementById('submitButton');
+const form = document.getElementById('uploadForm');
+const errorMessages = document.getElementById('errorMessages');
+const acceptCheckbox = document.getElementById('acceptCheckbox');
+
+acceptCheckbox.addEventListener('change', () => {
+  submitButton.disabled = !acceptCheckbox.checked;
+});
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  errorMessages.innerHTML = '';
+
+  // Validate file sizes and formats
+  const photoFile = document.getElementById('photo').files[0];
+  const marksheet10File = document.getElementById('marksheet10').files[0];
+  const marksheet12File = document.getElementById('marksheet12').files[0];
+  const ugCertificateFile = document.getElementById('ugCertificate').files[0];
+  const pgCertificateFile = document.getElementById('pgCertificate').files[0];
+  const identityProofFile = document.getElementById('identityProof').files[0];
+  const signatureFile = document.getElementById('signature').files[0];
+
+  const maxSize = 300 * 1024; // 300KB
+  const photoMaxSize = 200 * 1024; // 200KB
+
+  if (photoFile && (photoFile.size > photoMaxSize || !/\.(jpe?g)$/i.test(photoFile.name))) {
+    errorMessages.innerHTML += 'Invalid Passport Size Photo format or size.<br>';
+  }
+
+  if (marksheet10File && (marksheet10File.size > maxSize || marksheet10File.type !== 'application/pdf')) {
+    errorMessages.innerHTML += 'Invalid 10th Class Marksheet file format or size.<br>';
+  }
+
+  if (marksheet12File && (marksheet12File.size > maxSize || marksheet12File.type !== 'application/pdf')) {
+    errorMessages.innerHTML += 'Invalid 12th Class Marksheet file format or size.<br>';
+  }
+
+  if (ugCertificateFile && (ugCertificateFile.size > maxSize || ugCertificateFile.type !== 'application/pdf')) {
+    errorMessages.innerHTML += 'Invalid UG Degree Certificate file format or size.<br>';
+  }
+
+  if (pgCertificateFile && (pgCertificateFile.size > maxSize || pgCertificateFile.type !== 'application/pdf')) {
+    errorMessages.innerHTML += 'Invalid PG Degree Certificate file format or size.<br>';
+  }
+
+  if (identityProofFile && (identityProofFile.size > photoMaxSize || !/\.(jpe?g)$/i.test(identityProofFile.name))) {
+    errorMessages.innerHTML += 'Invalid Identity Proof file format or size.<br>';
+  }
+
+  if (signatureFile && (signatureFile.size > photoMaxSize || !/\.(jpe?g)$/i.test(signatureFile.name))) {
+    errorMessages.innerHTML += 'Invalid Signature file format or size.<br>';
+  }
+
+  if (errorMessages.innerHTML === '') {
+    // All files are valid, perform the upload or submit the form
+    form.submit();
+  }
+  if (!acceptCheckbox.checked) {
+    errorMessages.innerHTML = 'Please accept the Terms and Conditions.';
+  } else {
+    // Perform form submission or further processing here
+    console.log('Form submitted!');
+  }
+});
     </script>
   </head>
 
@@ -286,6 +380,62 @@
             </select>
           </div>
 
+          <div class="container" style="border-style:solid;">
+            <h2>Upload Your Documents</h2>
+          
+            <form id="uploadForm">
+            <hr style="border-top: 2px solid #666;">
+                
+            <label for="photo">Passport Size Photo (JPEG/JPG, max 200KB)</label>
+            <input type="file" id="photo" accept="image/jpeg,image/jpg" required>
+            <hr style="border-top: 2px solid #666;">
+          
+            <label for="marksheet10">10th Class Marksheet (PDF, max 300KB)</label>
+            <input type="file" id="marksheet10" accept="application/pdf" required>
+            <hr style="border-top: 2px solid #666;">
+              
+            <label for="marksheet12">12th Class Marksheet (PDF, max 300KB)</label>
+            <input type="file" id="marksheet12" accept="application/pdf" required>
+            <hr style="border-top: 2px solid #666;">
+          
+            <label for="ugCertificate">UG Degree Certificate (PDF, max 300KB)</label>
+            <input type="file" id="ugCertificate" accept="application/pdf" required>
+            <hr style="border-top: 2px solid #666;">
+          
+            <label for="pgCertificate">PG Degree Certificate (Only for M.C.A and M.Sc. students)  (PDF, max 300KB)</label>
+            <input type="file" id="pgCertificate" accept="application/pdf">
+            <hr style="border-top: 2px solid #666;">
+          
+            <label for="identityProof">Identity Proof (JPEG/JPG, max 200KB)</label>
+            <input type="file" id="identityProof" accept="image/jpeg,image/jpg" required>
+            <hr style="border-top: 2px solid #666;">
+          
+            <label for="signature">Signature (JPEG/JPG, max 200KB)</label>
+            <input type="file" id="signature" accept="image/jpeg,image/jpg" required>
+            <hr style="border-top: 2px solid #666;">
+          
+            <h3>Declaration By The Applicant</h3>
+            <p>
+              I hereby solemnly declare that all the particulars given in this form are true
+              to the best of my knowledge and belief. I shall abide by the rules and regulations laid down
+              by the College from time to time. In case the particulars furnished by me are found false, my
+              admission stands canceled.
+            </p>
+            <label>
+              <input type="checkbox" id="acceptCheckbox" required>
+              I Accept
+            </label>
+          
+          <!-- submit button will be disabled untill Applicant do not accept terms and conditions -->
+          
+            <button type="submit" id="submitButton" disabled>Upload Documents</button>
+            </form>
+            <div id="errorMessages" class="error"></div>
+            </div>
+          
+          <div class="container">
+          </div>
+          
         <div class="form-group">
           <input
             type="submit"

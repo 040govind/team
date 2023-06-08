@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admission Form</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="document.css"> -->
     <script src="script.js"></script>
+    <script src="document.js"></script>
   </head>
 
   <body>
@@ -209,13 +211,74 @@
                 </select>
               </div>
     
-            <div class="form-group">
+            <!-- <div class="form-group">
               <input
                 type="submit"
                 value="Submit"
                 class="submit-button"
               />
+            </div> -->
+
+
+            <!-- upload document section starts here.... -->
+            <div class="container" style="border-style:solid;">
+              <h2>Upload Your Documents</h2>
+            
+              <form id="uploadForm">
+              <hr style="border-top: 2px solid #666;">
+                  
+              <label for="photo">Passport Size Photo (JPEG/JPG, max 200KB)</label>
+              <input type="file" id="photo" accept="image/jpeg,image/jpg" required>
+              <hr style="border-top: 2px solid #666;">
+            
+              <label for="marksheet10">10th Class Marksheet (PDF, max 300KB)</label>
+              <input type="file" id="marksheet10" accept="application/pdf" required>
+              <hr style="border-top: 2px solid #666;">
+                
+              <label for="marksheet12">12th Class Marksheet (PDF, max 300KB)</label>
+              <input type="file" id="marksheet12" accept="application/pdf" required>
+              <hr style="border-top: 2px solid #666;">
+            
+              <label for="ugCertificate">UG Degree Certificate (PDF, max 300KB)</label>
+              <input type="file" id="ugCertificate" accept="application/pdf" required>
+              <hr style="border-top: 2px solid #666;">
+            
+              <label for="pgCertificate">PG Degree Certificate (Only for M.C.A and M.Sc. students)  (PDF, max 300KB)</label>
+              <input type="file" id="pgCertificate" accept="application/pdf">
+              <hr style="border-top: 2px solid #666;">
+            
+              <label for="identityProof">Identity Proof (JPEG/JPG, max 200KB)</label>
+              <input type="file" id="identityProof" accept="image/jpeg,image/jpg" required>
+              <hr style="border-top: 2px solid #666;">
+            
+              <label for="signature">Signature (JPEG/JPG, max 200KB)</label>
+              <input type="file" id="signature" accept="image/jpeg,image/jpg" required>
+              <hr style="border-top: 2px solid #666;">
+            
+              <h3>Declaration By The Applicant</h3>
+              <p>
+                I hereby solemnly declare that all the particulars given in this form are true
+                to the best of my knowledge and belief. I shall abide by the rules and regulations laid down
+                by the College from time to time. In case the particulars furnished by me are found false, my
+                admission stands canceled.
+              </p>
+              <label>
+                <input type="checkbox" id="acceptCheckbox" required>
+                I Accept
+              </label>
+            
+            <!-- submit button will be disabled untill Applicant do not accept terms and conditions -->
+            
+              <button type="submit" id="submitButton" class="form-group" disabled>Upload Documents</button>
+              </form>
+              <div id="errorMessages" class="error"></div>
+              </div>
+            
+            <div class="container">
             </div>
+            
+
+
       </form>
     </div>
   </body>

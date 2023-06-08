@@ -45,3 +45,6 @@ user_route.get('/forget',auth.isLogout,userController.forgetLoad);
 user_route.post('/forget',userController.forgetVerify);
 user_route.get('/forget-password',auth.isLogout,userController.forgetPasswordLoad);
 user_route.post('/forget-password',userController. resetPassword);
+
+//addmission form render 
+user_route.get('/Admission',userController.loadAddmission);

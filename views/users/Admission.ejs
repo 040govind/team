@@ -1,287 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admission Form</title>
-    <link rel="stylesheet"  type="text/css" href="css/addmission.css">
-    <!-- <link rel="stylesheet" href="document.css"> -->
 
-    
-  </head>
-
-  <body>
-    <div class="container">
-      <form>
-        <form>
-            <div class="image-container">
-              <div class="row">
-                <div class="col-sm-12">
-                  <img
-                    src="images/icon/cutm.jpg"
-                    width="100%"
-                    style="box-shadow: 1px 5px 14px #999999; "
-                  />
-                </div>
-              </div>
-            </div>
-            <h1 style="text-align: center; color: #c11a1a"><b>Admission Form</b></h1>
-            <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-    
-            <div class="form-group">
-              <label for="mobile">Mobile No:</label>
-              <input type="number" id="mobile" name="mobile" required />
-            </div>
-    
-            <div class="form-group" aria-required="true">
-              <label>Gender:</label>
-              <input type="radio" name="gender" value="male" required /> Male
-              <input type="radio" name="gender" value="female" required /> Female
-            </div>
-    
-            <div class="form-group">
-              <label for="fatherName">Father's Name:</label>
-              <input type="text" id="fatherName" name="fatherName" required />
-            </div>
-    
-            <div class="form-group">
-              <label for="fatherOccupation">Father's Occupation:</label>
-              <input type="text" id="fatherOccupation" name="fatherOccupation" required />
-            </div>
-    
-            <div class="form-group">
-              <label for="motherName">Mother's Name:</label>
-              <input type="text" id="motherName" name="motherName" required />
-            </div>
-    
-            <div class="form-group">
-              <label for="motherOccupation">Mother's Occupation:</label>
-              <input type="text" id="motherOccupation" name="motherOccupation" required />
-            </div>
-    
-            <div class="form-group">
-              <label for="income">Income Of Parents:</label>
-              <input type="text" id="income" name="income" required />
-            </div>
-    
-            <div class="form-group">
-              <label>Correspondent Address:</label>
-              <input type="text" id="city" name="city" placeholder="City" required />
-              <input type="text" id="state" name="state" placeholder="State" required />
-              <input type="text" id="pin" name="pin" placeholder="Pin" required />
-            </div>
-    
-            <div class="form-group">
-              <label>Permanent Address:</label>
-              <input type="text" id="pCity" name="pCity" placeholder="City" required />
-              <input type="text" id="pState" name="pState" placeholder="State" required />
-              <input type="text" id="pPin" name="pPin" placeholder="Pin" required />
-            </div>
-    
-            <div class="form-group">
-              <label>Nationality:</label>
-              <input type="text" id="nationality" name="nationality" required />
-            </div>
-    
-            <div class="form-group" aria-required="true">
-              <label>Caste:</label>
-              <input type="radio" name="caste" value="GEN" required /> GEN
-              <input type="radio" name="caste" value="OBC" required /> OBC
-              <input type="radio" name="caste" value="SC" required /> SC
-              <input type="radio" name="caste" value="ST" required /> ST
-            </div>
-    
-            <fieldset>
-              <legend>10th:</legend>
-              <div class="form-group">
-                <label>Name of Board/University:</label>
-                <input
-                  type="text"
-                  id="university10th"
-                  name="university10th"
-                  placeholder="Enter the name of the university"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label>Year of Passing:</label>
-                <input
-                  type="text"
-                  id="passingYear10th"
-                  name="passingYear10th"
-                  placeholder="Enter the year of passing"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label>Total CGPA/Percentage:</label>
-                <input
-                  type="text"
-                  id="cgpa10th"
-                  name="cgpa10th"
-                  placeholder="Enter your total CGPA/Percentage"
-                  required
-                />
-              </div>
-            </fieldset>
-    
-            <fieldset>
-              <legend>12th:</legend>
-              <div class="form-group">
-                <label>Qualification:</label>
-                <input
-                  type="text"
-                  id="Qualification12th"
-                  name="Qualification12th"
-                  placeholder="Enter your 12 qualification"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label>Name of Board/University:</label>
-                <input
-                  type="text"
-                  id="university12th"
-                  name="university12th"
-                  placeholder="Enter the name of the university"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label>Year of Passing:</label>
-                <input
-                  type="text"
-                  id="passingYear12th"
-                  name="passingYear12th"
-                  placeholder="Enter the year of passing"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label>Total CGPA/Percentage:</label>
-                <input
-                  type="text"
-                  id="cgpa12th"
-                  name="cgpa12th"
-                  placeholder="Enter your total CGPA/Percentage"
-                  required
-                />
-              </div>
-            </fieldset>
-    
-        
-            <div class="form-group">
-              <label for="jobTitle">Job Title:</label>
-              <select id="jobTitle" name="jobTitle" onchange="showTextarea()" required>
-                <option value="">Select Job Title</option>
-                <option value="student">Student</option>
-                <option value="teacher">Teacher</option>
-                <option value="employee">Employee</option>
-                <option value="others">Others</option>
-              </select>
-            </div>
-    
-            <div class="form-group textarea-wrapper" id="textareaWrapper">
-              <label for="otherJobTitle">Please Specify:</label>
-              <textarea id="otherJobTitle" name="otherJobTitle"></textarea>
-            </div>
-    
-            <!-- <div class="form-group">
-              <label>Upload Photo:</label>
-              <input type="file" id="photo" name="photo" required />
-            </div>
-    
-            <div class="form-group">
-              <label>Upload Signature:</label>
-              <input type="file" id="signature" name="signature" required />
-            </div> -->
-            <div class="form-group">
-                <label>Experience in Job:</label>
-                <select id="jobExperience" name="jobExperience">
-                  <option disabled selected>Select...</option>
-                  <option>0-2</option>
-                  <option>2-4</option>
-                  <option>4-6</option>
-                  <option>6-8</option>
-                  <option>10+</option>
-                </select>
-              </div>
-    
-            <!-- <div class="form-group">
-              <input
-                type="submit"
-                value="Submit"
-                class="submit-button"
-              />
-            </div> -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admission Form</title>
+  <link rel="stylesheet" type="text/css" href="css/addmission.css">
+  <!-- <link rel="stylesheet" href="document.css"> -->
 
 
-            <!-- upload document section starts here.... -->
-            <div class="container" style="border-style:solid;">
-              <h2>Upload Your Documents</h2>
-            
-              <form id="uploadForm">
-              <hr style="border-top: 2px solid #666;">
-                  
-              <label for="photo">Passport Size Photo (JPEG/JPG, max 200KB)</label>
-              <input type="file" id="photo" accept="image/jpeg,image/jpg" required>
-              <hr style="border-top: 2px solid #666;">
-            
-              <label for="marksheet10">10th Class Marksheet (PDF, max 300KB)</label>
-              <input type="file" id="marksheet10" accept="application/pdf" required>
-              <hr style="border-top: 2px solid #666;">
-                
-              <label for="marksheet12">12th Class Marksheet (PDF, max 300KB)</label>
-              <input type="file" id="marksheet12" accept="application/pdf" required>
-              <hr style="border-top: 2px solid #666;">
-            
-              <label for="ugCertificate">UG Degree Certificate (PDF, max 300KB)</label>
-              <input type="file" id="ugCertificate" accept="application/pdf" required>
-              <hr style="border-top: 2px solid #666;">
-            
-              <label for="pgCertificate">PG Degree Certificate (Only for M.C.A and M.Sc. students)  (PDF, max 300KB)</label>
-              <input type="file" id="pgCertificate" accept="application/pdf">
-              <hr style="border-top: 2px solid #666;">
-            
-              <label for="identityProof">Identity Proof (JPEG/JPG, max 200KB)</label>
-              <input type="file" id="identityProof" accept="image/jpeg,image/jpg" required>
-              <hr style="border-top: 2px solid #666;">
-            
-              <label for="signature">Signature (JPEG/JPG, max 200KB)</label>
-              <input type="file" id="signature" accept="image/jpeg,image/jpg" required>
-              <hr style="border-top: 2px solid #666;">
-            
-              <h3>Declaration By The Applicant</h3>
-              <p>
-                I hereby solemnly declare that all the particulars given in this form are true
-                to the best of my knowledge and belief. I shall abide by the rules and regulations laid down
-                by the College from time to time. In case the particulars furnished by me are found false, my
-                admission stands canceled.
-              </p>
-              <label>
-                <input type="checkbox" id="acceptCheckbox" required>
-                I Accept
-              </label>
-            
-            <!-- submit button will be disabled untill Applicant do not accept terms and conditions -->
-            
-              <button type="submit" id="submitButton" class="form-group">Upload Documents</button>
-              </form>
-              <div id="errorMessages" class="error"></div>
-              </div>
-            
-            <div class="container">
-            </div>
-            
+</head>
+
+<body>
+  <div class="container">
+    <form action="/admission" method="POST"  enctype="multipart/form-data">
+      <div class="image-container">
+        <div class="row">
+          <div class="col-sm-12">
+            <img src="images/icon/cutm.jpg" width="100%" style="box-shadow: 1px 5px 14px #999999; " />
+          </div>
+        </div>
+      </div>
+      <h1 style="text-align: center; color: #c11a1a"><b>Admission Form</b></h1>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="mobile">Mobile No:</label>
+        <input type="number" id="mobile" name="mobile" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group" aria-required="true">
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" required /> Male
+        <input type="radio" name="gender" value="female" required /> Female
+      </div>
+
+      <div class="form-group">
+        <label for="fatherName">Father's Name:</label>
+        <input type="text" id="fatherName" name="fatherName" required />
+      </div>
+
+      <div class="form-group">
+        <label for="fatherOccupation">Father's Occupation:</label>
+        <input type="text" id="fatherOccupation" name="fatherOccupation" required />
+      </div>
+
+      <div class="form-group">
+        <label for="motherName">Mother's Name:</label>
+        <input type="text" id="motherName" name="motherName" required />
+      </div>
+
+      <div class="form-group">
+        <label for="motherOccupation">Mother's Occupation:</label>
+        <input type="text" id="motherOccupation" name="motherOccupation" required />
+      </div>
+
+      <div class="form-group">
+        <label for="income">Income Of Parents:</label>
+        <input type="text" id="income" name="income" required />
+      </div>
+
+      <div class="form-group">
+        <label>Correspondent Address:</label>
+        <input type="text" id="city" name="city" placeholder="City" required />
+        <input type="text" id="state" name="state" placeholder="State" required />
+        <input type="text" id="pin" name="pin" placeholder="Pin" required />
+      </div>
+
+      <div class="form-group">
+        <label>Permanent Address:</label>
+        <input type="text" id="pCity" name="pCity" placeholder="City" required />
+        <input type="text" id="pState" name="pState" placeholder="State" required />
+        <input type="text" id="pPin" name="pPin" placeholder="Pin" required />
+      </div>
+
+      <div class="form-group">
+        <label>Nationality:</label>
+        <input type="text" id="nationality" name="nationality" required />
+      </div>
+
+      <div class="form-group" aria-required="true">
+        <label>Caste:</label>
+        <input type="radio" name="caste" value="GEN" required /> GEN
+        <input type="radio" name="caste" value="OBC" required /> OBC
+        <input type="radio" name="caste" value="SC" required /> SC
+        <input type="radio" name="caste" value="ST" required /> ST
+      </div>
+
+      <fieldset>
+        <legend>10th:</legend>
+        <div class="form-group">
+          <label>Name of Board/University:</label>
+          <input type="text" id="university10th" name="university10th" placeholder="Enter the name of the university"
+            required />
+        </div>
+        <div class="form-group">
+          <label>Year of Passing:</label>
+          <input type="text" id="passingYear10th" name="passingYear10th" placeholder="Enter the year of passing"
+            required />
+        </div>
+        <div class="form-group">
+          <label>Total CGPA/Percentage:</label>
+          <input type="text" id="cgpa10th" name="cgpa10th" placeholder="Enter your total CGPA/Percentage" required />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>12th:</legend>
+        <div class="form-group">
+          <label>Qualification:</label>
+          <input type="text" id="Qualification12th" name="Qualification12th" placeholder="Enter your 12 qualification"
+            required />
+        </div>
+        <div class="form-group">
+          <label>Name of Board/University:</label>
+          <input type="text" id="university12th" name="university12th" placeholder="Enter the name of the university"
+            required />
+        </div>
+        <div class="form-group">
+          <label>Year of Passing:</label>
+          <input type="text" id="passingYear12th" name="passingYear12th" placeholder="Enter the year of passing"
+            required />
+        </div>
+        <div class="form-group">
+          <label>Total CGPA/Percentage:</label>
+          <input type="text" id="cgpa12th" name="cgpa12th" placeholder="Enter your total CGPA/Percentage" required />
+        </div>
+      </fieldset>
 
 
-      </form>
-    </div>
-    <script  type="text/javascript"  src="js/addmisson.js"></script>
-    <script  type="text/javascript"  src="js/document.js"></script>
-  </body>
+      <div class="form-group">
+        <label for="jobTitle">Job Title:</label>
+        <select id="jobTitle" name="jobTitle" onchange="showTextarea()" required>
+          <option value="">Select Job Title</option>
+          <option value="student">Student</option>
+          <option value="teacher">Teacher</option>
+          <option value="employee">Employee</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+
+      <div class="form-group textarea-wrapper" id="textareaWrapper">
+        <label for="otherJobTitle">Please Specify:</label>
+        <textarea id="otherJobTitle" name="otherJobTitle"></textarea>
+      </div>
+
+
+      <div class="form-group">
+        <label>Experience in Job:</label>
+        <select id="jobExperience" name="jobExperience">
+          <option disabled selected>Select...</option>
+          <option>0-2</option>
+          <option>2-4</option>
+          <option>4-6</option>
+          <option>6-8</option>
+          <option>10+</option>
+        </select>
+      </div>
+
+      <!-- upload document section starts here.... -->
+      <!-- <div class="container" style="border-style:solid;">
+        <h2>Upload Your Documents</h2>
+
+        <hr style="border-top: 2px solid #666;">
+
+        <label for="photo">Passport Size Photo (JPEG/JPG, max 200KB)</label>
+        <input type="file" id="photo" accept="image/jpeg,image/jpg" name="userImg" required>
+        <hr style="border-top: 2px solid #666;">
+
+        <label for="marksheet10">10th Class Marksheet (PDF, max 300KB)</label>
+        <input type="file" id="marksheet10" accept="application/pdf" name="marksheet10" required>
+        <hr style="border-top: 2px solid #666;">
+
+        <label for="marksheet12">12th Class Marksheet (PDF, max 300KB)</label>
+        <input type="file" id="marksheet12" accept="application/pdf"  name="marksheet12" required>
+        <hr style="border-top: 2px solid #666;">
+
+        <label for="ugCertificate">UG Degree Certificate (PDF, max 300KB)</label>
+        <input type="file" id="ugCertificate" accept="application/pdf" name="ugCertificate" required>
+        <hr style="border-top: 2px solid #666;">
+
+        <label for="pgCertificate">PG Degree Certificate (Only for M.C.A and M.Sc. students) (PDF, max 300KB)</label>
+        <input type="file" id="pgCertificate" accept="application/pdf" name="pgCertificate">
+        <hr style="border-top: 2px solid #666;">
+
+        <label for="identityProof">Identity Proof (JPEG/JPG, max 200KB)</label>
+        <input type="file" id="identityProof" accept="image/jpeg,image/jpg" name="identityProof" required>
+        <hr style="border-top: 2px solid #666;">
+
+        <label for="signature">Signature (JPEG/JPG, max 200KB)</label>
+        <input type="file" id="signature" accept="image/jpeg,image/jpg" name="signature" required>
+        <hr style="border-top: 2px solid #666;"> -->
+
+
+        <h3>Declaration By The Applicant</h3>
+        <p>
+          I hereby solemnly declare that all the particulars given in this form are true
+          to the best of my knowledge and belief. I shall abide by the rules and regulations laid down
+          by the College from time to time. In case the particulars furnished by me are found false, my
+          admission stands canceled.
+        </p>
+        <label>
+          <input type="checkbox" id="acceptCheckbox" required>
+          I Accept
+        </label>
+
+        <!-- submit button will be disabled until the applicant does not accept terms and conditions -->
+        <div class="form-group">
+          <button type="submit" id="submitButton" class="submit-button">Upload Documents</button>
+        </div>
+        <div id="errorMessages" class="error"></div>
+      </div>
+
+
+
+    </form>
+
+  </div>
+</body>
+<script type="text/javascript" src="js/addmission.js"></script>
+<script type="text/javascript" src="js/document.js"></script>
 </html>

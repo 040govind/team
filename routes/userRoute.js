@@ -1,10 +1,12 @@
 const express=require('express');
+const multer = require('multer');
 const user_route = express();
 const bodyParser=require('body-parser');
 const path = require('path');
 const session = require('express-session');
 const config = require('../confic/config');
 const auth = require('../middleware/auth');
+const upload = require('../middleware/addmissionMulter');
 user_route.use(express.static( 'public'))
 user_route.set('view engine','ejs');
 user_route.set('views','./views/users');
@@ -47,4 +49,8 @@ user_route.get('/forget-password',auth.isLogout,userController.forgetPasswordLoa
 user_route.post('/forget-password',userController. resetPassword);
 
 //addmission form render 
+
+
+
 user_route.get('/Admission',userController.loadAddmission);
+user_route.post('/admission',userController.submitAdmission);

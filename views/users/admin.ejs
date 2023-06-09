@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Page</title>
+    <link rel="stylesheet" type="text/css" href="css/admin.css" />
+  </head>
+  <body>
+    <div class="navbar">
+        <img src="/images/icon/logo.png" alt="">
+      <h1>Admin Page</h1>
+      <div class="nav-links">
+        <a href="#newsSection">Update News</a>
+        <a href="#studentsSection">Show Students</a>
+      </div>
+    </div>
+    <!-- 
+  <div class="sidebar">
+    <ul>
+      <li><a href="#newsSection">Update News</a></li>
+      <li><a href="#studentsSection">Show Students</a></li>
+    </ul>
+  </div> -->
+
+    <div class="content">
+      <h2 id="newsSection">Update News</h2>
+      <!--   <div class="field">
+        <label for="newsTitle">Title:</label>
+        <input type="text" id="newsTitle" placeholder="Enter news title" />
+      </div>-->
+      <div class="field">
+        <label for="newsContent">Content:</label>
+        <textarea id="newsContent" placeholder="Enter news content"></textarea>
+      </div>
+      <div class="field">
+        <button type="button" onclick="addNews()">Add News</button>
+      </div>
+
+      <!--
+    <h2 id="studentsSection">Students</h2>
+    <button onclick="showStudents()">Show Students</button>
+
+    <div id="studentsTable" style="display: none;">
+      <table id="studentsList">
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Grade</th>
+          <th>Actions</th>
+        </tr>
+      </table>
+    </div>
+    
+    
+    
+    
+    <div id="editStudentModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Edit Student Details</h3>
+        <form id="studentEditForm" class="studentForm">
+          <input type="hidden" id="editStudentId">
+          <label for="editStudentName">Name:</label>
+          <input type="text" id="editStudentName" placeholder="Enter student name">
+          <label for="editStudentAge">Age:</label>
+          <input type="text" id="editStudentAge" placeholder="Enter student age">
+          <label for="editStudentGrade">Grade:</label>
+          <input type="text" id="editStudentGrade" placeholder="Enter student grade">
+          <button type="button" onclick="saveEditedStudent()">Save</button>
+        </form>
+      </div>
+    </div>-->
+    </div>
+  </body>
+
+  <script  type="text/js" src="js/main.js"></script>
+</html>

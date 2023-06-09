@@ -1,36 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <link rel="stylesheet" type="text/css" href="css/loginStyle.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("form").submit(function () {
+                alert("Great Job !");
+            });
+        });
+
+    </script>
+
 </head>
+
 <body>
-    <h1>User Registration form</h1>
-    <form action="" method="POST">
-        <input type="text" name="name" placeholder="Enter your nmae">
-        <br>
-        <br>
-        <input type="email" name="email" placeholder="Enter your email">
-        <br>
-        <br>
-        <input type="text" name="mobile" placeholder="Enter your NO">
-        <br>
-        <br>
-        <input type="password" name="password" placeholder="Enter your Password">
-        <br>
-        <br>
-        <input type="submit" value="register">
-    </form>
-    
-    
-    <%
-       if(typeof message!==  'undefined'){
-        %>
-        <p style="color:green"><%= message %></p>
-        <%
-       }
-    %>
+    <nav>
+        <div class="logo">
+            <img src="images/icon/logo.png" alt="logo" />
+        </div>
+        <ul>
+            <li><a class="active" href="">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+        </ul>
+
+        <img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu" />
+    </nav>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signup-form" onsubmit="validateForm(event)" action="/register" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="name" required>
+            <span id="username-error" class="error"></span>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile" name="mobile" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span id="password-error" class="error"></span>
+
+            <button type="submit" class="btn">Sign Up</button>
+
+            <% if(typeof message!=='undefined' ){ %>
+                <p style="color:green">
+                    <%= message %>
+                </p>
+                <% } %>
+        </form>
+    </div>
+    <!-- <script type="text/javascript" src="js/register.js"></script> -->
 </body>
+
 </html>

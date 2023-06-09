@@ -1,10 +1,13 @@
 const User = require('../models/userModel');
+const UserAdmission = require('../models/admissionModel');
 const bcrypt = require('bcrypt');
 const emailValidator = require('deep-email-validator');
 const nodemailer = require('nodemailer');
 const randomString = require("randomstring");
 const config = require('../confic/config');
 const session = require('express-session');
+const multer = require('multer');
+const mongoose=require('mongoose');
 //user_route.use(express.static(path.join(__dirname, 'public')));
 //PASWORD ENCRYPTION DECRYPTION
 
@@ -116,7 +119,7 @@ const insertUser = async (req, res) => {
             if (userData) {
                 sendVerifyMail(req.body.name, req.body.email, userData._id);
 
-                res.render('register', { message: "Your Registration have been success" });
+                res.render('register', { message: "Your Registration have been success  please verify your mail" });
             }
             else {
                 res.render('register', { message: "Your Registration have been Fail" });
@@ -148,7 +151,7 @@ const verifyLogin = async (req, res) => {
         console.log(email);
         console.log(password);
         if (email == adminId && password == adminPassword) {
-            res.render('/admin');
+            res.render('admin');
         }
         else {
             const userdata = await User.findOne({ email: email });
@@ -162,12 +165,13 @@ const verifyLogin = async (req, res) => {
                     console.log(userdata.isVerify);
                     if (userdata.isVerify == false) {
                         console.log("verify");
+                        sendVerifyMail(req.body.name, req.body.email, userdata._id);
                         res.render('login', { message: "Please verify your mail" });
                     }
                     else {
                         req.session.user_id = userdata._id;
                         console.log("Home")
-                        res.render('index');
+                        res.render('index',{message:userdata.name});
                     }
                 }
                 else {
@@ -303,7 +307,7 @@ const resetPassword = async (req, res) => {
     } catch (error) {
         console.log(error.message);
     }
-}
+};
 
 //Admission page render
 const loadAddmission = async (req, res) => {
@@ -313,7 +317,158 @@ const loadAddmission = async (req, res) => {
     catch (error) {
         console.log(error.message);
     }
+};
+
+//Post Admission form data
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//         cb(null, './uploads/');
+//     },
+//     filename: function (req, file, cb) {
+//         const extension = path.extname(file.originalname);
+//         cb(null, file.fieldname + '-' + Date.now() + extension);
+//     }
+// });
+// const upload = multer({ storage: storage });
+// const submitAdmission = async (req, res) => {
+//     try {
+//         const email = req.body.email;
+//         const result = await UserAdmission.find({ email });
+//         console.log(req.body.city);
+
+//         if (result.length > 0) {
+//             res.render('/Admission', { message: "User Already register" });
+//         }
+//         else {
+//            // const User = mongoose.model('User', userSchema);
+
+            
+
+
+//             const student = new UserAdmission({
+//                 name: req.body.name,
+//                 mobile: req.body.mobile,
+//                 email: req.body.email,
+//                 fatherName: req.body.fatherName,
+//                 fatherOccupition: req.body.fatherOccupation,
+//                 motherName: req.body.motherName,
+//                 motherOccupition: req.body.motherOccupation,
+//                 income: req.body.income,
+//                 Caddress: {
+//                     city: req.body.city,
+//                     state: req.body.state,
+//                     pin: req.body.pin,
+//                 },
+//                 Paddress: {
+//                     city: req.body.city,
+//                     state: req.body.state,
+//                     pin: req.body.pin,
+//                 },
+//                 nationality: req.body.nationality,
+//                 cast: req.body.caste,
+//                 Detail10: {
+//                     nameOfBoard: req.body.university10th,
+//                     yearOfPassing: req.body.passingYear10th,
+//                     Percentage: req.body.cgpa10th,
+//                 },
+//                 Detail12: {
+//                     qualification: req.body.Qualification12th,
+//                     nameOfBoard: req.body.university12th,
+//                     yearOfPassing: req.body.passingYear12th,
+//                     Percentage: req.body.cgpa12th,
+//                 },
+//                 jobTitle: req.body.jobTitle,
+//                 jobExprience: req.body.jobExperience,
+//                 userImg: req.files['userImg'][0].filename ,
+//                 marksheet10:req.files['marksheet10'][0].filename,
+//                 marksheet12:req.files['marksheet12'][0].filename,
+//                 ugCertificate:req.files['ugCertificate'][0].filename,
+//                 pgCertificate:req.files['pgCertificate'][0].filename,
+//                 signature:req.files['signature'][0].filename,
+//                 isVerify: 0
+//             });
+
+//             const studentData = await student.save();
+
+//             if (studentData) {
+//                 res.render('/documentUpload');
+//             }
+//             else {
+//                 res.render('/Admission', { message: "Registration failed" });
+//             }
+//         }
+
+//     } catch (error) {
+//         console.log("in upload section");
+//         console.log(error.message);
+//     }
+// }
+
+
+const submitAdmission = async (req, res) => {
+    try {
+        const email = req.body.email;
+        const result = await UserAdmission.find({ email });
+        console.log(req.body.city);
+
+        if (result.length > 0) {
+            res.render('/Admission', { message: "User Already register" });
+        }
+        else {
+
+            const student = new UserAdmission({
+                name: req.body.name,
+                mobile: req.body.mobile,
+                email: req.body.email,
+                fatherName: req.body.fatherName,
+                fatherOccupition: req.body.fatherOccupation,
+                motherName: req.body.motherName,
+                motherOccupition: req.body.motherOccupation,
+                income: req.body.income,
+                Caddress: {
+                    city: req.body.city,
+                    state: req.body.state,
+                    pin: req.body.pin,
+                },
+                Paddress: {
+                    city: req.body.city,
+                    state: req.body.state,
+                    pin: req.body.pin,
+                },
+                nationality: req.body.nationality,
+                cast: req.body.cast,
+                Detail10: {
+                    nameOfBoard: req.body.university10th,
+                    yearOfPassing: req.body.passingYear10th,
+                    Percentage: req.body.cgpa10th,
+                },
+                Detail12: {
+                    qualification: req.body.Qualification12th,
+                    nameOfBoard: req.body.university12th,
+                    yearOfPassing: req.body.passingYear12th,
+                    Percentage: req.body.cgpa12th,
+                },
+                jobTitle: req.body.jobTitle,
+                jobExprience: req.body.jobExperience,
+                isVerify: 0
+            });
+
+            const studentData = await student.save();
+
+            if(studentData)
+            {
+                res.render('/documentUpload');
+            }
+            else{
+                res.render('/Admission',{message:"Registration failed"});
+            }
+        }
+
+    } catch (error) {
+        console.log(error.message);
+    }
 }
+
 
 module.exports = {
     loadRegister,
@@ -327,5 +482,6 @@ module.exports = {
     forgetVerify,
     forgetPasswordLoad,
     resetPassword,
-    loadAddmission
+    loadAddmission,
+    submitAdmission
 }

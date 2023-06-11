@@ -7,8 +7,8 @@
 	<title>NITT ONLINE</title>
 	<meta name="desciption" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<script>
 		$(window).on('scroll', function(){
@@ -42,7 +42,7 @@
 				<a class="get-started" href="login">Login</a>
 				<a class="get-started" href="register">Register</a>
 			 <% } %>
-			
+			 
 			
 		
 			<img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
@@ -82,13 +82,27 @@
 				</h1>
 				
 				<h5>The National Institute of Technology Tiruchirappalli, (NITT or NIT Trichy), formerly known as Regional Engineering College, Tiruchirappalli, is a technical institute of national importance governed by the NIT Act passed by the Parliament of India. It was established in 1964. In 2003, the institution was granted “Deemed to be University” status and then it was renamed as the National Institute of Technology Tiruchirappalli.</h5>
-				
+				<!-- <button  >Enroll Now</button> -->
+				<input type="button" id="Enroll_button" onclick="location.href='/Admission'" value="Enroll Now">
 			</div>
 
 			<div class="svg-image">
 				<img src="images/extra/adminblock.jpg" alt="svg">
 			</div>
 		</div>
+		<div class="head-container" style="margin-bottom: 20px;">
+		
+			<div class="svg-image">
+				<img src="images/icon/tricolor.png" alt="svg">
+			</div>
+			<div class="quote">			
+				<h3>Freedom To Learn.</h3>
+				<h5>Freedom to learn is the essence of personal growth and intellectual development. It grants individuals the autonomy to choose what, how, and when they learn, fostering a sense of curiosity, self-directedness, and a passion for knowledge. With this freedom, learners become active participants in their education, unlocking their full potential and cultivating critical thinking skills. It is through the freedom to learn that individuals can truly flourish, embracing lifelong learning and contributing to the growth of an empowered and enlightened society.</h5>
+			</div>
+
+		</div>
+
+
 		<div class="side-menu" id="side-menu">
 			<div class="close" onclick="sideMenu(1)"><img src="images/icon/close.png" alt=""></div>
 			<div class="user">
@@ -107,28 +121,6 @@
 	</header>
 
 
-
-<!-- FEEDBACK -->
-	<div class="title2" id="feedBACK">
-		<span>Give Feedback</span>
-		<div class="shortdesc2">
-			<p>Please share your valuable feedback to us</p>
-		</div>
-	</div>
-
-	<div class="feedbox">
-		<div class="feed">
-			<form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
-				<label>Your Name</label><br>
-				<input type="text" name="" class="fname" required="required"><br>
-				<label>Email</label><br>
-				<input type="email" name="mail" required="required"><br>
-				<label>Additional Details</label><br>
-				<textarea name="addtional"></textarea><br>
-				<button type="submit" id="csubmit">Send Message</button>
-			</form>
-		</div>
-	</div>
 
 <!-- FOOTER -->
 	<footer>

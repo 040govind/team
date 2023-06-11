@@ -21,6 +21,10 @@ const userSchema=new mongoose.Schema({
         type:Boolean,
 
     },
+    createdAt:{
+       type:Date,
+       require:true
+    },
     token:{
         type:String,
         default:''

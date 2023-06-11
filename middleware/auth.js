@@ -33,7 +33,28 @@ const isLogout = async(req,res,next)=>{
     }
 }
 
+//FOR ADMISSION PAGE RENDERING
+const isLoginAdmission = async(req,res,next)=>{
+    try {
+        
+        if(req.session.user_id){
+            //const data = await User.findOne({_id:req.session.user_id});
+
+          res.render('/Admission');
+        }
+        else{
+              res.render('register',{message:"Please Register first"});
+        }
+        next();
+
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+
 module.exports={
     isLogin,
-    isLogout
+    isLogout,
+    isLoginAdmission
 }

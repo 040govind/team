@@ -7,7 +7,7 @@ const randomString = require("randomstring");
 const config = require('../confic/config');
 const session = require('express-session');
 const multer = require('multer');
-const mongoose=require('mongoose');
+const mongoose = require('mongoose');
 //user_route.use(express.static(path.join(__dirname, 'public')));
 //PASWORD ENCRYPTION DECRYPTION
 
@@ -104,7 +104,7 @@ const insertUser = async (req, res) => {
         }
         else if (result.length > 0) {
             console.log(result);
-            sendVerifyMail(req.body.name, req.body.email, result[0]._id);
+            //sendVerifyMail(req.body.name, req.body.email, result[0]._id);
             res.render('register', { message: "Email already register but Not Verify please verify" });
         }
         else {
@@ -113,17 +113,29 @@ const insertUser = async (req, res) => {
                 mobile: req.body.mobile,
                 email: req.body.email,
                 password: HashPass,
-                isVerify: 0
+                isVerify: 0,
+                createdAt: new Date()
             });
             const userData = await user.save();
+            setTimeout(async () => {
+                const user = await User.findOne({ email });
+                if (result && !result.isVerify) {
+                    console.log(result.isVerify);
+                    console.log(user.isVerify);
+                    await user.deleteOne(result.email);
+                    console.log(`Unverified user with email ${user.email} has been deleted.`);
+                }
+            }, 2 * 60000);
+
             if (userData) {
                 sendVerifyMail(req.body.name, req.body.email, userData._id);
 
-                res.render('register', { message: "Your Registration have been success  please verify your mail" });
+                res.render('register', { message: "Your Registration have been success  please verify your mail within 2 minute" });
             }
             else {
                 res.render('register', { message: "Your Registration have been Fail" });
             }
+
         }
     }
     catch (error) {
@@ -171,7 +183,7 @@ const verifyLogin = async (req, res) => {
                     else {
                         req.session.user_id = userdata._id;
                         console.log("Home")
-                        res.render('index',{message:userdata.name});
+                        res.render('index', { message: userdata.name });
                     }
                 }
                 else {
@@ -203,9 +215,16 @@ const userLogout = async (req, res) => {
 
 const verifyMail = async (req, res) => {
     try {
-        const updateInfo = await User.updateOne({ _id: req.query.id }, { $set: { isVerify: 1 } });
-        console.log(updateInfo);
-        res.render("verifyMail");
+        const userData = await User.findOne({ _id: req.body.id });
+        console.log(userData);
+        if (userData) {
+            res.render('register', { message: "Time out please register again" });
+        }
+        else {
+            const updateInfo = await User.updateOne({ _id: req.query.id }, { $set: { isVerify: 1 } });
+            console.log(updateInfo);
+            res.render("verifyMail");
+        }
     } catch (error) {
         console.log(error.message);
     }
@@ -303,7 +322,7 @@ const resetPassword = async (req, res) => {
 
         const secure_pass = await securePassword(password);
         const userdata = await User.findByIdAndUpdate({ _id: userid }, { $set: { passwor: secure_pass, token: '' } });
-        res.redirect('/');
+        res.redirect('/index');
     } catch (error) {
         console.log(error.message);
     }
@@ -342,7 +361,7 @@ const loadAddmission = async (req, res) => {
 //         else {
 //            // const User = mongoose.model('User', userSchema);
 
-            
+
 
 
 //             const student = new UserAdmission({
@@ -409,7 +428,7 @@ const submitAdmission = async (req, res) => {
     try {
         const email = req.body.email;
         const result = await UserAdmission.find({ email });
-        console.log(req.body.city);
+        console.log(req.body.state);
 
         if (result.length > 0) {
             res.render('/Admission', { message: "User Already register" });
@@ -426,17 +445,17 @@ const submitAdmission = async (req, res) => {
                 motherOccupition: req.body.motherOccupation,
                 income: req.body.income,
                 Caddress: {
-                    city: req.body.city,
+                    city: req.body.city[0],
                     state: req.body.state,
-                    pin: req.body.pin,
+                    pin: req.body.pin[0],
                 },
                 Paddress: {
-                    city: req.body.city,
+                    city: req.body.city[0],
                     state: req.body.state,
-                    pin: req.body.pin,
+                    pin: req.body.pin[0],
                 },
                 nationality: req.body.nationality,
-                cast: req.body.cast,
+                cast: req.body.caste,
                 Detail10: {
                     nameOfBoard: req.body.university10th,
                     yearOfPassing: req.body.passingYear10th,
@@ -455,12 +474,11 @@ const submitAdmission = async (req, res) => {
 
             const studentData = await student.save();
 
-            if(studentData)
-            {
+            if (studentData) {
                 res.render('/documentUpload');
             }
-            else{
-                res.render('/Admission',{message:"Registration failed"});
+            else {
+                res.render('/Admission', { message: "Registration failed" });
             }
         }
 

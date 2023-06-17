@@ -27,14 +27,24 @@
         <label for="newsTitle">Title:</label>
         <input type="text" id="newsTitle" placeholder="Enter news title" />
       </div>-->
+      <form action="/adminNews" method="POST">
       <div class="field">
         <label for="newsContent">Content:</label>
-        <textarea id="newsContent" placeholder="Enter news content"></textarea>
+        <textarea id="newsContent" name="news" placeholder="Enter news content"></textarea>
       </div>
       <div class="field">
-        <button type="button" onclick="addNews()">Add News</button>
+        <button type="submit">Add News</button>
       </div>
-
+      <div>
+        <%
+        if(typeof message!==  'undefined'){
+         %>
+         <p style="color:red; font-weight: bold;" ><%= message %></p>
+         <%
+        }
+     %>
+      </div>
+    </form>
       <!--
     <h2 id="studentsSection">Students</h2>
     <button onclick="showStudents()">Show Students</button>

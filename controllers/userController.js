@@ -119,7 +119,8 @@ const insertUser = async (req, res) => {
             const userData = await user.save();
             setTimeout(async () => {
                 const user = await User.findOne({ email });
-                if (result && !result.isVerify) {
+                console.log(user);
+                if (result && !user.isVerify) {
                     console.log(result.isVerify);
                     console.log(user.isVerify);
                     await user.deleteOne(result.email);
@@ -163,7 +164,8 @@ const verifyLogin = async (req, res) => {
         console.log(email);
         console.log(password);
         if (email == adminId && password == adminPassword) {
-            res.render('admin');
+            req.session.admin = "adminnitt2024@gmail.com";
+            res.redirect('/admin');
         }
         else {
             const userdata = await User.findOne({ email: email });

@@ -7,6 +7,8 @@ const app=express();
 //for user routes
 const userRoute = require('./routes/userRoute');
 app.use('/',userRoute);
+const adminRoute = require('./routes/adminRoute');
+app.use('/',adminRoute);
 
 // app.get("/:universalURL", (req, res) => {
 //     res.send("404 URL NOT FOUND");

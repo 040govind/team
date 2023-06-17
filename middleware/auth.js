@@ -52,9 +52,28 @@ const isLoginAdmission = async(req,res,next)=>{
     }
 }
 
+const isAdmin = async(req,res,next)=>{
+    try {
+        
+        if(req.session.admin){
+            //const data = await User.findOne({_id:req.session.user_id});
+
+          res.render('admin');
+        }
+        else{
+              res.render('login',{message:"Please Login As admin first"});
+        }
+        next();
+
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
 
 module.exports={
     isLogin,
     isLogout,
-    isLoginAdmission
+    isLoginAdmission,
+    isAdmin
 }

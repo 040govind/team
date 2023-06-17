@@ -69,7 +69,11 @@
 		
 <!-- Sliding Information -->
     
+<% if(typeof msg !=='undefined'){ %>
+	<marquee style="background: linear-gradient(to right, #FA4B37, #DF2771); margin-top: 120px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="10"><div class="marqu"><%= msg %></div></marquee>
+  <% } else{ %>  
 	<marquee style="background: linear-gradient(to right, #FA4B37, #DF2771); margin-top: 120px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="10"><div class="marqu">The National Institute of Technology Tiruchirappalli, (NITT or NIT Trichy), formerly known as Regional Engineering College, Tiruchirappalli, is a technical institute of national importance governed by the NIT Act passed by the Parliament of India. It was established in 1964. In 2003, the institution was granted “Deemed to be University” status and then it was renamed as the National Institute of Technology Tiruchirappalli. The National Institute of Technology Tiruchirappalli stands at 8th position with the score of 69.17  in Engineering subject in India Rankings 2022. The National Institute of Technology Trichy retained 9th position in Engineering subject of the India Rankings for two consecutive years in 2020 and 2021. NIT Trichy was ranked between 10th and 12th positions in Engineering subject of India Rankings from 2016 to 2019.</div></marquee>
+ <% } %>
 	
 		<div class="head-container">
 		

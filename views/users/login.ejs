@@ -23,11 +23,12 @@
         <img src="images/icon/logo.png" alt="logo" />
       </div>
       <ul>
-        <li><a class="active" href="">Home</a></li>
+        <li><a  href="/">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="team.html">Team</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="course.html">Courses</a></li>
         <li><a href="blog.html">Blogs</a></li>
       </ul>
 
@@ -39,27 +40,7 @@
       />
     </nav>
     <div class="form-box">
-      <div class="button-box">
-        <div id="btn"></div>
-        <button
-          type="button"
-          class="toggle-btn"
-          id="log"
-          onclick="login()"
-          style="color: #fff"
-        >
-          Log In
-        </button>
-        <button type="button" class="toggle-btn" id="reg" onclick="register()">
-          Register
-        </button>
-      </div>
-
-      <!--	<div class="social-icons">
-				<img src="images/icon/fb2.png">
-				<img src="images/icon/insta2.png">
-				<img src="images/icon/tt2.png">
-			</div>-->
+           <h3 style="margin-top: 10%;">Login</h3>
 
       <!-- Login Form -->
       <form id="login" class="input-group" action="login" method="POST">
@@ -87,7 +68,9 @@
         </div>
         <input type="checkbox" class="check-box" />Remember Password
         <button type="submit" class="submit-btn">Log In</button><br>
-        <a href="/forget" style="color:blue">forget Password</a>
+        <div class="submit-btn">
+        <a href="/forget" style="color:blue; margin-top: 10%;">Forget Password</a>
+      </div>
         <%
         if(typeof message!==  'undefined'){
          %>
@@ -96,17 +79,6 @@
         }
      %>
       </form>
-
-     
-
-      <div class="other" id="other">
-        <div class="instead">
-          <h3>or</h3>
-        </div>
-        <button class="connect" onclick="google()">
-          <img src="images/icon/google.png" /><span>Sign in with Google</span>
-        </button>
-      </div>
 
       <!-- Registration Form -->
       <form id="register" class="input-group" action="register" method="POST">

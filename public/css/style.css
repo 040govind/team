@@ -130,12 +130,13 @@ a, button {
 }
 .quote h5 {
 	margin-top: 20px;
-	color: #0009;
-	line-height: 20px;
+	color: rgb(0, 0, 0);
+	font-size: large;
+	line-height: 25px;
 }
 .quote p {
 	font-size: 50px;
-	color: #2e2e2e;
+	color: #000000;
 }
 .quote .play {
 	margin-top: 20px;
@@ -170,7 +171,7 @@ a, button {
 	margin-top: 40px;
 	margin-left: 30px;
 	font-weight: bold;
-	width: 400px;
+	width: 200px;
   }
 /* SIDE MENU */
 .menu {
@@ -525,6 +526,7 @@ flex-direction: column;
 #detail p{
 	font-size: 15px;
 	line-height: 25px;
+	font-weight: bold;
 	font-variant: small-caps;
 	text-align: center;
 	margin: 25px;

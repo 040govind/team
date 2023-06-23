@@ -21,6 +21,8 @@ body {
 .form-box {
   width: 380px;
   height: 500px;
+  display: flex;
+  justify-content: center;
   position: relative;
   margin-top: 150px;
   background: #fff8;
@@ -115,7 +117,6 @@ body {
   color: #fff;
   border: 0;
   outline: none;
-  border-radius: 30px;
 }
 
 .reg-btn {

@@ -333,7 +333,8 @@ const resetPassword = async (req, res) => {
 //Admission page render
 const loadAddmission = async (req, res) => {
     try {
-        res.render('Admission');
+        const url="https://admission.nitt.edu/online"
+        res.redirect(url);
     }
     catch (error) {
         console.log(error.message);

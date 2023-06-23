@@ -21,8 +21,10 @@ user_route.use(session({
 
 //REQUIRE THE USER CONTROLLER
 const userController = require('../controllers/userController');
-user_route.get('/',(req,res)=>{
-    res.render('index');
+const admin =require('../controllers/adminController');
+user_route.get('/',async (req,res)=>{
+    const news =  await admin.displayNews(req,res);
+    res.render('index',{msg:news});
 })
 //USER ROUTING REGESTRING FORM
 
@@ -52,5 +54,5 @@ user_route.post('/forget-password',userController. resetPassword);
 
 
 
-user_route.get('/Admission',auth.isLoginAdmission,userController.loadAddmission);
-user_route.post('/admission',userController.submitAdmission);
+user_route.get('/Admission',userController.loadAddmission);
+//user_route.post('/admission',userController.submitAdmission);

@@ -25,7 +25,7 @@
 <!-- Navigation Bar -->
 	<header id="header">
 		<nav>
-			<div class="logo"><img src="/images/icon/logo.png" alt="logo"></div>
+			<div class="logo"><a href="#"><img src="/images/icon/logo.png" alt="logo"></a></div>
 			<ul>
 				<li><a class="active" href="/">Home</a></li>
 				<li><a href="about.html">About</a></li>
@@ -34,15 +34,15 @@
 				<li><a href="contact.html">Contact</a></li>
 				<li><a href="course.html">Courses</a></li>
 				<li><a href="blog.html">Blogs</a></li>
-			</ul>
+			
 			<% if(typeof message !=='undefined'){ %>
-				<a class="get-started" href=""><%= message %></a>
-				<a class="get-started" href="logout">Logout</a>
+				<li><a class="get-started" href=""><%= message %></a></li>
+				<li><a class="get-started" href="logout">Logout</a></li>
 			  <% } else{ %>  
-				<a class="get-started" href="login">Login</a>
-				<a class="get-started" href="register">Register</a>
+				<li><a class="get-started" href="login" style="width: 80%;">Login</a></li>
+				<li><a class="get-started" href="register">Register</a></li>
 			 <% } %>
-			 
+			</ul>
 			
 		
 			<img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
@@ -86,8 +86,7 @@
 				</h1>
 				
 				<h5>The National Institute of Technology Tiruchirappalli, (NITT or NIT Trichy), formerly known as Regional Engineering College, Tiruchirappalli, is a technical institute of national importance governed by the NIT Act passed by the Parliament of India. It was established in 1964. In 2003, the institution was granted “Deemed to be University” status and then it was renamed as the National Institute of Technology Tiruchirappalli.</h5>
-				<!-- <button  >Enroll Now</button> -->
-				<input type="button" id="Enroll_button" onclick="location.href='/Admission'" value="Enroll Now">
+				<input type="button" id="Enroll_button" onclick="location.href='/Admission'" value="Register Now">
 			</div>
 
 			<div class="svg-image">
@@ -100,7 +99,7 @@
 				<img src="images/icon/tricolor.png" alt="svg">
 			</div>
 			<div class="quote">			
-				<h3>Freedom To Learn.</h3>
+				<h3>Freedom of Learning</h3>
 				<h5>Freedom to learn is the essence of personal growth and intellectual development. It grants individuals the autonomy to choose what, how, and when they learn, fostering a sense of curiosity, self-directedness, and a passion for knowledge. With this freedom, learners become active participants in their education, unlocking their full potential and cultivating critical thinking skills. It is through the freedom to learn that individuals can truly flourish, embracing lifelong learning and contributing to the growth of an empowered and enlightened society.</h5>
 			</div>
 
@@ -110,7 +109,6 @@
 		<div class="side-menu" id="side-menu">
 			<div class="close" onclick="sideMenu(1)"><img src="images/icon/close.png" alt=""></div>
 			<div class="user">
-				<!-- <img src="images/creator/roshan.jpeg" alt="Username"> -->
 				<p>user</p>
 			</div>
 			<ul>
@@ -133,7 +131,7 @@
 				<img src="images/icon/logo1.png" style="width: 200px;">
 				<div class="logo"></div>
 				
-				<p class="rights-text">Copyright © 2021 Created by team under Alphonse Sir. </p>
+				<p class="rights-text">Copyright © 2021 Created by Computer Application Department. </p>
 				<br><p><img src="images/icon/location.png"> National Institute of Technology<br>Tiruchirappalli,Tamil Nadu INDIA</p><br>
 				<p><img src="images/icon/phone.png"> 
 					Fax: +91-431-2500133<br></p>

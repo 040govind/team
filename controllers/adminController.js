@@ -6,7 +6,7 @@ const LoadAdmin = async(req,res)=>{
         console.log(error.message);
     }
 }
-const displayNews = async (req, res) => {
+const displayNews = async (req,res) => {
     try {
       console.log("aaaa");
       const result = await News.find({});
@@ -57,6 +57,7 @@ const insertNews = async (req, res) => {
   
   module.exports = {
     insertNews,
-    LoadAdmin
+    LoadAdmin,
+    displayNews
   };
   

@@ -76,7 +76,8 @@ const LoadHome = async (req, res) => {
 
 const loadRegister = async (req, res) => {
     try {
-        res.render('register');
+        const url="https://admission.nitt.edu/online"
+        res.redirect(url);
     }
     catch (error) {
         console.log(error.message);
@@ -148,7 +149,8 @@ const insertUser = async (req, res) => {
 const loginLoad = async (req, res) => {
     try {
 
-        res.render('login');
+        const url="https://admission.nitt.edu/online"
+        res.redirect(url);
     } catch (error) {
         console.log(error.meassage);
     }

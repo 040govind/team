@@ -28,17 +28,17 @@ user_route.get('/',async (req,res)=>{
 })
 //USER ROUTING REGESTRING FORM
 
-user_route.get('/register',auth.isLogout,userController.loadRegister);
+user_route.get('/register',userController.loadRegister);
  user_route.post('/register',userController.insertUser);
 
  //USERlOGIN ROUTES 
- user_route.get('/login',auth.isLogout,userController.loginLoad);
+ user_route.get('/login',userController.loginLoad);
  user_route.post('/login',userController.verifyLogin);
 
 
  //home page
- user_route.get('/',auth.isLogin,userController.LoadHome);
-module.exports = user_route;
+ user_route.get('/',userController.LoadHome);
+
 
 //VERIFY MAIL
 user_route.get('/verify',userController.verifyMail);
@@ -56,3 +56,4 @@ user_route.post('/forget-password',userController. resetPassword);
 
 user_route.get('/Admission',userController.loadAddmission);
 //user_route.post('/admission',userController.submitAdmission);
+module.exports = user_route;

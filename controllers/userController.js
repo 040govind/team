@@ -149,8 +149,7 @@ const insertUser = async (req, res) => {
 const loginLoad = async (req, res) => {
     try {
 
-        const url="https://admission.nitt.edu/online"
-        res.redirect(url);
+       res.render('login');
     } catch (error) {
         console.log(error.meassage);
     }

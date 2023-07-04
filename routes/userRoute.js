@@ -22,10 +22,10 @@ user_route.use(session({
 //REQUIRE THE USER CONTROLLER
 const userController = require('../controllers/userController');
 const admin =require('../controllers/adminController');
-user_route.get('/',async (req,res)=>{
+/*user_route.get('/',async (req,res)=>{
     const news =  await admin.displayNews(req,res);
     res.render('index',{msg:news});
-})
+})*/
 //USER ROUTING REGESTRING FORM
 
 user_route.get('/register',userController.loadRegister);

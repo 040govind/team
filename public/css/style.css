@@ -173,6 +173,19 @@ a, button {
 	font-weight: bold;
 	width: 200px;
   }
+#pdf{
+	padding: 6%;
+	background-color: #DF2771;
+	border-radius: 4%;
+	border: none;
+	cursor: pointer;
+	color: white;
+	margin-top: 20px;
+	margin-left: 30px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	width: 200px;
+  }
 /* SIDE MENU */
 .menu {
 	cursor: pointer;

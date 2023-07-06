@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Options and Important Dates</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .option-container {
+      display: none;
+      margin-bottom: 20px;
+    }
+
+    .option-button {
+      margin-bottom: 10px;
+      padding: 8px 16px;
+      font-weight: bold;
+    }
+
+    .option-content {
+      display: none;
+      margin-bottom: 20px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .bullet-list {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .eligibility-paragraph {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        justify-content: center;
+      }
+      
+      .option-container {
+        margin-right: 20px;
+      }
+    }
+  </style>
+ <script>
+    window.addEventListener("DOMContentLoaded", function() {
+      var admissionButton = document.getElementById("admission-button");
+      var optionContents = document.querySelectorAll(".option-content");
+      var optionContainers = document.querySelectorAll(".option-container");
+  
+      admissionButton.addEventListener("mouseenter", function() {
+        optionContainers.forEach(function(container) {
+          container.style.display = "block";
+        });
+      });
+  
+      admissionButton.addEventListener("click", function() {
+        optionContents.forEach(function(content) {
+          content.style.display = "block";
+        });
+      });
+  
+      optionContainers.forEach(function(container, index) {
+        container.addEventListener("click", function() {
+          optionContents.forEach(function(content) {
+            content.style.display = "none";
+          });
+          optionContents[index].style.display = "block";
+          optionContainers.forEach(function(container) {
+            container.style.display = "block";
+          });
+          container.scrollIntoView({ behavior: "smooth", block: "start" });
+          container.style.backgroundColor = "#f2f2f2";
+        });
+      });
+    });
+  </script>
+  
+</head>
+<body>
+  
+
+  <button id="admission-button">Admission</button>
+
+  <div id="important-dates-table" class="option-content">
+    <h2>Important Dates</h2>
+    <table>
+        <tr>
+          <th>Milestone</th>
+          <th>August 2023 batch</th>
+        </tr>
+        <tr>
+          <td>Application Form Opens</td>
+          <td>19 June 2023</td>
+        </tr>
+        <tr>
+          <td>Application Form Closes</td>
+          <td>19 July 2023</td>
+        </tr>
+        <tr>
+          <td>Final Admission to the program closes</td>
+          <td>7 August 2023</td>
+        </tr>
+        <tr>
+          <td>First semester begins</td>
+          <td>16 August 2023</td>
+        </tr>
+        <tr>
+          <td>First Assessment Cycle Test</td>
+          <td>27 - 30 September 2023</td>
+        </tr>
+        <tr>
+          <td>Second Assessment Cycle Test</td>
+          <td>27 - 30 October 2023</td>
+        </tr>
+        <tr>
+          <td>Third Assessment/Quiz Test</td>
+          <td>27 - 30 November 2023</td>
+        </tr>
+        <tr>
+          <td>Final Assessment Test</td>
+          <td>11 - 14 December 2023</td>
+        </tr>
+        <tr>
+          <td>Cultural & Sports activity</td>
+          <td>15 - 16 December 2023</td>
+        </tr>
+        <tr>
+          <td>On campus program</td>
+          <td>10 - 16 December 2023</td>
+        </tr>
+        <tr>
+          <td>Start of Second semester</td>
+          <td>17 January 2024</td>
+        </tr>
+      </table>
+  </div>
+
+  <div id="mandatory-requirements-list" class="option-content">
+    <h2>Mandatory Requirements for Learning</h2>
+    <ul class="bullet-list">
+        <li>A laptop/desktop device with access to a good internet connection will be a key requirement to learn effectively from our courses.</li>
+        <li>Learners should be able to travel to NIT Tiruchirappalli or assigned exam centers for quizzes and exams each semester.</li>
+    </ul>
+  </div>
+
+  <div id="eligibility-paragraph" class="option-content">
+    <h2>Eligibility</h2>
+    <p>
+      Minimum eligibility to apply: Candidates securing at least 60% marks in aggregate or 6.5 CGPA on a 10-point scale (55% marks or 6.0 CGPA on a 10-point scale in case of SC/ST/PwD) in any B.E. or B.Tech. Bachelor’s degree (any specialization)<br>
+      or<br>
+      M.Sc. (Computer Science/Information Technology/Software Engineering/any equivalent discipline)<br>
+      or<br>
+      MCA from a recognized institution.<br>
+      This program is open to all working IT professionals or employees in different teaching and research organizations. Non-working enthusiastic job seekers are also eligible for this program.
+    </p>
+  </div>
+</body>
+</html>

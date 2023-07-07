@@ -1,7 +1,8 @@
 table {
-  margin-left: 25px;
+  /* margin-left: 25px;
+  margin-right: 25px; */
   border-collapse: collapse;
-  width: 80%;
+  width: 100%;
 }
 
 th, td {
@@ -24,6 +25,22 @@ h2{
 ul,p,h3{
   margin-left: 25px;
 }
+
+.level {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+.level:hover {
+  background-color: #e0e0e0;
+}
+
 /* p{
 margin-left: 25px;
 } */
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .tab {
+    width: 100%;
+  }
+}

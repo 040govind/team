@@ -1,131 +1,171 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
-	<title>NITT ONLINE</title>
-	<meta name="desciption" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="script.js"></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-	<script>
-		$(window).on('scroll', function(){
-  			if($(window).scrollTop()){
-  			  $('nav').addClass('black');
- 			 }else {
- 		   $('nav').removeClass('black');
- 		 }
-		})
-	</script>
-</head>
-<body>
-<!-- Navigation Bar -->
-	<header id="header" style="height: auto;">
-		<nav>
-			<div class="logo"><a href="/"><img src="images/icon/logo.png" alt="logo"></a></div>
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a class="active">About</a></li>
-				<li><a href="team.html">Team</a></li>
-				<li><a href="services.html">Services</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="course.html">Courses</a></li>
-				<li><a href="blog.html">Blogs</a></li>
-			</ul>
-			<!-- <a class="get-started" href="login">Register</a> -->
-			<img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
-		</nav>
-		
-			
-			
-	
-		<div class="side-menu" id="side-menu">
-			<div class="close" onclick="sideMenu(1)"><img src="images/icon/close.png" alt=""></div>
-			<div class="user">
-				<!-- <img src="images/creator/roshan.jpeg" alt="Username"> -->
-				<p>user</p>
-			</div>
-			<ul>
-				<li><a href="#">About</a></li>
-				<li><a href="#portfolio_section">Portfolio</a></li>
-				<li><a href="#team_section">Team</a></li>
-				<li><a href="#services_section">Services</a></li>
-				<li><a href="#contactus_section">Contact</a></li>
-				<li><a href="#feedBACK">Feedback</a></li>
-			</ul>
-		</div>
-	</header>
+  <head>
+    <link rel="shortcut icon" type="png" href="images/icon/favicon.png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Comaptible" content="IE=edge" />
+    <title>NITT ONLINE</title>
+    <meta name="desciption" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop()) {
+          $("nav").addClass("black");
+        } else {
+          $("nav").removeClass("black");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header id="header" style="height: auto">
+      <nav>
+        <div class="logo">
+          <a href="/"><img src="images/icon/logo.png" alt="logo" /></a>
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="Academics.html">Academics</a></li>
+          <li><a href="Admission.html">Admission</a></li>
+          <li><a href="services.html">FAQ</a></li>
+          <li><a href="about.html">About NITT</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <!-- <a class="get-started" href="login">Register</a> -->
+        <img
+          src="images/icon/menu.png"
+          class="menu"
+          onclick="sideMenu(0)"
+          alt="menu"
+        />
+      </nav>
 
+      <div class="side-menu" id="side-menu">
+        <div class="close" onclick="sideMenu(1)">
+          <img src="images/icon/close.png" alt="" />
+        </div>
+        <div class="user">
+          <!-- <img src="images/creator/roshan.jpeg" alt="Username"> -->
+          <p>user</p>
+        </div>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#portfolio_section">Portfolio</a></li>
+          <li><a href="#team_section">Team</a></li>
+          <li><a href="#services_section">Services</a></li>
+          <li><a href="#contactus_section">Contact</a></li>
+          <li><a href="#feedBACK">Feedback</a></li>
+        </ul>
+      </div>
+    </header>
 
+    <!-- Location  -->
+    <div class="diffSection">
+      <div class="about-content">
+        <div class="side-text" style="margin-right: 50px">
+          <h2>Location</h2>
+          <p>
+            The National Institute of Technology (formerly known as Regional
+            Engineering College) Tiruchirappalli, situated in the heart of Tamil
+            Nadu on the banks of the river Cauvery, was started as a joint and
+            co-operative venture of the Government of India and the Government
+            of Tamil Nadu during 1964 with a view to catering to the needs of
+            man-power in technology for the Country. The College has
+            subsequently been conferred with autonomy in financial and
+            administrative matters to achieve rapid development. Because of this
+            rich experience, this institution was granted Deemed University
+            Status with the approval of the University Grants Commission, the
+            All India Council for Technical Education and the Govt. of India in
+            the year 2003 and was renamed as National Institute of Technology.
+            NITT was registered under the Societies Registration Act XXVII of
+            1975. During 2007 by the act of parliament, NIT-T became an
+            Institution of National Importance.
+          </p>
+        </div>
+        <div class="side-image">
+          <img class="sideImage" src="images/extra/location.jpg" />
+        </div>
+      </div>
+    </div>
 
-<!-- Location  -->
-<div class="diffSection">
-	
-	<div class="about-content">
-			
-			<div class="side-text" style="margin-right: 50px;">
-				<h2>Location</h2>
-				<p>The National Institute of Technology (formerly known as Regional Engineering College) Tiruchirappalli, situated in the heart of Tamil Nadu on the banks of the river Cauvery, was started as a joint and co-operative venture of the Government of India and the Government of Tamil Nadu during 1964 with a view to catering to the needs of man-power in technology for the Country. The College has subsequently been conferred with autonomy in financial and administrative matters to achieve rapid development. Because of this rich experience, this institution was granted Deemed University Status with the approval of the University Grants Commission, the All India Council for Technical Education and the Govt. of India in the year 2003 and was renamed as National Institute of Technology. NITT was registered under the Societies Registration Act XXVII of 1975. During 2007 by the act of parliament, NIT-T became an Institution of National Importance.</p>
-			</div>
-			<div class="side-image">
-				<img class="sideImage" src="images/extra/location.jpg">
-			</div>
-	</div>
-</div>
+    <!-- History -->
+    <div class="diffSection">
+      <div class="about-content">
+        <div class="side-image">
+          <img class="sideImage" src="images/extra/hist.jpg" />
+        </div>
+        <div class="side-text">
+          <h2>History</h2>
+          <p>
+            The National Institute of Technology (formerly known as Regional
+            Engineering College) Tiruchirappalli, situated in the heart of Tamil
+            Nadu on the banks of the river Cauvery, was started as a joint and
+            co-operative venture of the Government of India and the Government
+            of Tamil Nadu during 1964 with a view to catering to the needs of
+            man-power in technology for the Country. The College has
+            subsequently been conferred with autonomy in financial and
+            administrative matters to achieve rapid development. Because of this
+            rich experience, this institution was granted Deemed University
+            Status with the approval of the University Grants Commission, the
+            All India Council for Technical Education and the Govt. of India in
+            the year 2003 and was renamed as National Institute of Technology.
+            NITT was registered under the Societies Registration Act XXVII of
+            1975. During 2007 by the act of parliament, NIT-T became an
+            Institution of National Importance.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Admission -->
+    <div class="diffSection">
+      <div class="about-content">
+        <div class="side-text" style="margin-right: 50px">
+          <h2>How To Get To NIT-T</h2>
+          <p>
+            NIT-T is in Tiruchirapalli (also know as Trichy or Tiruchy). It is
+            located about 22 km from Tiruchurappalli Jn / Central Bus stand on
+            the Trichy-Thanjavur Highway.The simplest and most economical way to
+            reach NIT-T is by bus. Any city Bus at the Tiruchirapalli Jn will
+            take you to the central bus stand. Board Thanjavur bound mofussil or
+            route bus. The journey time from Trichy will be around 30 minutes.
+            Taxis may charge around Rs.200/-
+          </p>
+        </div>
+        <div class="side-image">
+          <img class="sideImage" src="images/extra/location.jpg" />
+        </div>
+      </div>
+    </div>
 
-<!-- History -->
-	<div class="diffSection">
-	
-		<div class="about-content">
-				<div class="side-image">
-					<img class="sideImage" src="images/extra/hist.jpg">
-				</div>
-				<div class="side-text">
-					<h2>History</h2>
-					<p>The National Institute of Technology (formerly known as Regional Engineering College) Tiruchirappalli, situated in the heart of Tamil Nadu on the banks of the river Cauvery, was started as a joint and co-operative venture of the Government of India and the Government of Tamil Nadu during 1964 with a view to catering to the needs of man-power in technology for the Country. The College has subsequently been conferred with autonomy in financial and administrative matters to achieve rapid development. Because of this rich experience, this institution was granted Deemed University Status with the approval of the University Grants Commission, the All India Council for Technical Education and the Govt. of India in the year 2003 and was renamed as National Institute of Technology. NITT was registered under the Societies Registration Act XXVII of 1975. During 2007 by the act of parliament, NIT-T became an Institution of National Importance.</p>
-				</div>
-		</div>
-	</div>
-<!-- Admission -->
-<div class="diffSection">
-	
-	<div class="about-content">
-			
-			<div class="side-text" style="margin-right: 50px;">
-				<h2>How To Get To NIT-T</h2>
-				<p>NIT-T is in Tiruchirapalli (also know as Trichy or Tiruchy). It is located about 22 km from Tiruchurappalli Jn / Central Bus stand on the Trichy-Thanjavur Highway.The simplest and most economical way to reach NIT-T is by bus. Any city Bus at the Tiruchirapalli Jn will take you to the central bus stand. Board Thanjavur bound mofussil or route bus. The journey time from Trichy will be around 30 minutes. Taxis may charge around Rs.200/- </p>
-			</div>
-			<div class="side-image">
-				<img class="sideImage" src="images/extra/location.jpg">
-			</div>
-	</div>
-</div>
-   
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-container">
+        <div class="left-col">
+          <img src="images/icon/logo1.png" style="width: 200px" />
+          <div class="logo"></div>
 
-
-
-<!-- FOOTER -->
-<footer>
-	<div class="footer-container">
-		<div class="left-col">
-			<img src="images/icon/logo1.png" style="width: 200px;">
-			<div class="logo"></div>
-			
-			<p class="rights-text">Copyright © 2021 Created by Computer Application Department.  </p>
-			<br><p><img src="images/icon/location.png"> National Institute of Technology<br>Tiruchirappalli,Tamil Nadu INDIA</p><br>
-			<p><img src="images/icon/phone.png"> 
-				Fax: +91-431-2500133<br></p>
-		</div>
-		<div class="right-col">
-			<h1 style="color: #fff">Online Courses</h1>
-			<div class="border"></div><br>
-			<p>We innovate Learning Processes.</p>
-			
-		</div>
-	</div>
-</footer>
-
-</body>
+          <p class="rights-text">
+            Copyright © 2021 Created by Computer Application Department.
+          </p>
+          <br />
+          <p>
+            <img src="images/icon/location.png" /> National Institute of
+            Technology<br />Tiruchirappalli,Tamil Nadu INDIA
+          </p>
+          <br />
+          <p><img src="images/icon/phone.png" /> Fax: +91-431-2500133<br /></p>
+        </div>
+        <div class="right-col">
+          <h1 style="color: #fff">Online Courses</h1>
+          <div class="border"></div>
+          <br />
+          <p>We innovate Learning Processes.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

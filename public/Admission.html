@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" type="png" href="images/icon/favicon.png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Comaptible" content="IE=edge" />
+    <title>Admission</title>
+    <meta name="desciption" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/courseStyle.css" />
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop()) {
+          $("nav").addClass("black");
+        } else {
+          $("nav").removeClass("black");
+        }
+      });
+    </script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #898282;
+      }
+
+      .bullet-list {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+
+      .eligibility-paragraph {
+        margin-bottom: 20px;
+      }
+
+      @media screen and (max-width: 768px) {
+        body {
+          padding: 10px;
+        }
+
+        table {
+          font-size: 12px;
+        }
+
+        .bullet-list {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header id="header" style="height: auto">
+      <nav>
+        <div class="logo">
+          <a href="/"><img src="images/icon/logo.png" alt="logo" /></a>
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="Academics.html">Academics</a></li>
+          <li><a href="Admission.html">Admission</a></li>
+          <li><a href="services.html">FAQ</a></li>
+          <li><a href="about.html">About NITT</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <!-- <a class="get-started" href="login">Register</a> -->
+        <img
+          src="images/icon/menu.png"
+          class="menu"
+          onclick="sideMenu(0)"
+          alt="menu"
+        />
+      </nav>
+      </div>
+    </header>
+    <div class="level" style="margin-top: 160px">
+      <h2>Important Dates</h2><br>
+      <table>
+        <tr>
+          <th>Milestone</th>
+          <th>August 2023 batch</th>
+        </tr>
+        <tr>
+          <td>Application Form Opens</td>
+          <td>19 June 2023</td>
+        </tr>
+        <tr>
+          <td>Application Form Closes</td>
+          <td>19 July 2023</td>
+        </tr>
+        <tr>
+          <td>Final Admission to the program closes</td>
+          <td>7 August 2023</td>
+        </tr>
+        <tr>
+          <td>First semester begins</td>
+          <td>16 August 2023</td>
+        </tr>
+        <tr>
+          <td>First Assessment Cycle Test</td>
+          <td>27 - 30 September 2023</td>
+        </tr>
+        <tr>
+          <td>Second Assessment Cycle Test</td>
+          <td>27 - 30 October 2023</td>
+        </tr>
+        <tr>
+          <td>Third Assessment/Quiz Test</td>
+          <td>27 - 30 November 2023</td>
+        </tr>
+        <tr>
+          <td>Final Assessment Test</td>
+          <td>11 - 14 December 2023</td>
+        </tr>
+        <tr>
+          <td>Cultural & Sports activity</td>
+          <td>15 - 16 December 2023</td>
+        </tr>
+        <tr>
+          <td>On campus program</td>
+          <td>10 - 16 December 2023</td>
+        </tr>
+        <tr>
+          <td>Start of Second semester</td>
+          <td>17 January 2024</td>
+        </tr>
+      </table><br>
+
+      <h2>Mandatory Requirements for Learning</h2>
+      <ul class="bullet-list">
+        <li>
+          A laptop/desktop device with access to a good internet connection will
+          be a key requirement to learn effectively from our courses.
+        </li>
+        <li>
+          Learners should be able to travel to NIT Tiruchirappalli or assigned
+          exam centers for quizzes and exams each semester.
+        </li>
+      </ul><br>
+
+      <h2>Eligibility</h2>
+      <p>
+        Minimum eligibility to apply: Candidates securing at least 60% marks in
+        aggregate or 6.5 CGPA on a 10-point scale (55% marks or 6.0 CGPA on a
+        10-point scale in case of SC/ST/PwD) in any B.E. or B.Tech. Bachelor’s
+        degree (any specialization)<br />
+        or<br />
+        M.Sc. (Computer Science/Information Technology/Software Engineering/any
+        equivalent discipline)<br />
+        or<br />
+        MCA from a recognized institution.<br />
+        This program is open to all working IT professionals or employees in
+        different teaching and research organizations. Non-working enthusiastic
+        job seekers are also eligible for this program.
+      </p>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-container">
+        <div class="left-col">
+          <img src="images/icon/logo1.png" style="width: 200px" />
+          <div class="logo"></div>
+
+          <p class="rights-text">
+            Copyright © 2021 Created by Computer Application Department.
+          </p>
+          <br />
+          <p>
+            <img src="images/icon/location.png" /> National Institute of
+            Technology<br />Tiruchirappalli,Tamil Nadu INDIA
+          </p>
+          <br />
+          <p><img src="images/icon/phone.png" /> Fax: +91-431-2500133<br /></p>
+        </div>
+        <div class="right-col">
+          <h1 style="color: #fff">Online Courses</h1>
+          <div class="border"></div>
+          <br />
+          <p>We innovate Learning Processes.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

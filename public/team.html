@@ -1,130 +1,163 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
-	<title>NITT ONLINE</title>
-	<meta name="desciption" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="script.js"></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-	<script>
-		$(window).on('scroll', function(){
-  			if($(window).scrollTop()){
-  			  $('nav').addClass('black');
- 			 }else {
- 		   $('nav').removeClass('black');
- 		 }
-		})
-	</script>
-</head>
-<body>
-<!-- Navigation Bar -->
-	<header id="header">
-		<nav>
-			<div class="logo"><img src="images/icon/logo.png" alt="logo"></div>
-			<ul>
-				<li><a href="/" >Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a class="active">Team</a></li>
-				<li><a href="services.html">Services</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="course.html">Courses</a></li>
-				<li><a href="blog.html">Blogs</a></li>
-			</ul>
-			<!-- <a class="get-started" href="login">Register</a> -->
-			<img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
-		</nav>
-		
-				
-	
-		<div class="side-menu" id="side-menu">
-			<div class="close" onclick="sideMenu(1)"><img src="images/icon/close.png" alt=""></div>
-			<div class="user">
-				<!-- <img src="images/creator/roshan.jpeg" alt="Username"> -->
-				<p>user</p>
-			</div>
-			<ul>
-				<li><a href="about.html">About</a></li>
-				<li><a href="#portfolio_section">Portfolio</a></li>
-				<li><a href="#team_section">Team</a></li>
-				<li><a href="#services_section">Services</a></li>
-				<li><a href="#contactus_section">Contact</a></li>
-				<li><a href="#feedBACK">Feedback</a></li>
-			</ul>
-		</div>
-	</header>
-		
+  <head>
+    <link rel="shortcut icon" type="png" href="images/icon/favicon.png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Comaptible" content="IE=edge" />
+    <title>NITT ONLINE</title>
+    <meta name="desciption" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop()) {
+          $("nav").addClass("black");
+        } else {
+          $("nav").removeClass("black");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header id="header">
+      <nav>
+        <div class="logo">
+          <a href="/"><img src="images/icon/logo.png" alt="logo" /></a>
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="Academics.html">Academics</a></li>
+          <li><a href="Admission.html">Admission</a></li>
+          <li><a href="services.html">FAQ</a></li>
+          <li><a href="about.html">About NITT</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <!-- <a class="get-started" href="login">Register</a> -->
+        <img
+          src="images/icon/menu.png"
+          class="menu"
+          onclick="sideMenu(0)"
+          alt="menu"
+        />
+      </nav>
 
-<!-- TEAM -->
-	<div class="diffSection" id="team_section">
-		<center><p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;">Faculty Coordinators</p></center>
-		<div class="totalcard">
-			<div class="card">
-				<center><img src="images/creator/alphonse_sir.png"></center>
-				<center><div class="card-title">Dr. P. J. A. Alphonse</div>
-				<div id="detail">
-					<p>Dr. P.J.A. Alphonse, Professor in the Department of Computer Applications, 
-						National Institute of Technology Tiruchirappalli has been with the institute since Year 2000. He completed his master’s degree from IIT Delhi and PhD from National Institute of Technology Tiruchirappalli. His research interests are in the areas of Graph Theory, Data Science, Internet of Things, and Deep Learning.  
-						<br> Email Id: alphonse@nitt.edu</p>
-					<div class="duty"></div>
-					
-				</div>
-				</center>
-			</div>
-			
-			<div class="card">
-				<center><img src="images/creator/gangadharan.png"></center>
-				<center><div class="card-title">Dr. G. R. Gangadharan</div>
-				<div id="detail">
-					<p>“Dr. G. R. Gangadharan, Associate Professor in the Department of Computer
-						Applications, National Institute of Technology Tiruchirappalli, has been with the institute since May 2018. He has received Ph.D. degree in
-						Information and Communication Technology from the University of Trento, Trento, Italy, and European University Association. His research interests are mainly located on the interface between technology and business perspectives. He is a Senior Member of IEEE and ACM.
-						“ <br>Email Id: ganga@nitt.edu</p>
-					<div class="duty"></div>
-					
-				</div>
-				</center>
-			</div>
-			<div class="card">
-				<center><img src="images/creator/vinay.png"></center>
-				<center><div class="card-title">Dr. Vinay Raj</div>
-					<div id="detail">
-						<p>“Dr. Vinay Raj, Assistant Professor in the Department of Computer Applications, National Institute of Technology Tiruchirappalli, has been with the institute since October 2022. He has earned his master’s degree from BITS Pilani and PhD from NIT Warangal. His research interests are in the areas of Software Engineering, Machine Learning, Service Oriented Architecture, Microservices, Serverless Computing.“
-							<br>Email Id: vinayraj@nitt.edu
-						</p>
-						<div class="duty"></div>
-						
-					</div>
-				</center>
-			</div>
-		</div>
-	</div>
+      <div class="side-menu" id="side-menu">
+        <div class="close" onclick="sideMenu(1)">
+          <img src="images/icon/close.png" alt="" />
+        </div>
+        <div class="user">
+          <!-- <img src="images/creator/roshan.jpeg" alt="Username"> -->
+          <p>user</p>
+        </div>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#portfolio_section">Portfolio</a></li>
+          <li><a href="#team_section">Team</a></li>
+          <li><a href="#services_section">Services</a></li>
+          <li><a href="#contactus_section">Contact</a></li>
+          <li><a href="#feedBACK">Feedback</a></li>
+        </ul>
+      </div>
+    </header>
 
+    <!-- TEAM -->
+    <div class="diffSection" id="team_section">
+      <center>
+        <p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px">
+          Faculty Coordinators
+        </p>
+      </center>
+      <div class="totalcard">
+        <div class="card">
+          <center><img src="images/creator/alphonse_sir.png" /></center>
+          <center>
+            <div class="card-title">Dr. P. J. A. Alphonse</div>
+            <div id="detail">
+              <p>
+                Dr. P.J.A. Alphonse, Professor in the Department of Computer
+                Applications, National Institute of Technology Tiruchirappalli
+                has been with the institute since Year 2000. He completed his
+                master’s degree from IIT Delhi and PhD from National Institute
+                of Technology Tiruchirappalli. His research interests are in the
+                areas of Graph Theory, Data Science, Internet of Things, and
+                Deep Learning. <br />
+                Email Id: alphonse@nitt.edu
+              </p>
+              <div class="duty"></div>
+            </div>
+          </center>
+        </div>
 
-	
+        <div class="card">
+          <center><img src="images/creator/gangadharan.png" /></center>
+          <center>
+            <div class="card-title">Dr. G. R. Gangadharan</div>
+            <div id="detail">
+              <p>
+                “Dr. G. R. Gangadharan, Associate Professor in the Department of
+                Computer Applications, National Institute of Technology
+                Tiruchirappalli, has been with the institute since May 2018. He
+                has received Ph.D. degree in Information and Communication
+                Technology from the University of Trento, Trento, Italy, and
+                European University Association. His research interests are
+                mainly located on the interface between technology and business
+                perspectives. He is a Senior Member of IEEE and ACM. “
+                <br />Email Id: ganga@nitt.edu
+              </p>
+              <div class="duty"></div>
+            </div>
+          </center>
+        </div>
+        <div class="card">
+          <center><img src="images/creator/vinay.png" /></center>
+          <center>
+            <div class="card-title">Dr. Vinay Raj</div>
+            <div id="detail">
+              <p>
+                “Dr. Vinay Raj, Assistant Professor in the Department of
+                Computer Applications, National Institute of Technology
+                Tiruchirappalli, has been with the institute since October 2022.
+                He has earned his master’s degree from BITS Pilani and PhD from
+                NIT Warangal. His research interests are in the areas of
+                Software Engineering, Machine Learning, Service Oriented
+                Architecture, Microservices, Serverless Computing.“ <br />Email
+                Id: vinayraj@nitt.edu
+              </p>
+              <div class="duty"></div>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
 
-<!-- FOOTER -->
-<footer>
-    <div class="footer-container">
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-container">
         <div class="left-col">
-            <img src="images/icon/logo1.png" style="width: 200px;">
-            <div class="logo"></div>
-            
-            <p class="rights-text">Copyright © 2021 Created by team under Alphonse Sir. </p>
-            <br><p><img src="images/icon/location.png"> National Institute of Technology<br>Tiruchirappalli,Tamil Nadu INDIA</p><br>
-            <p><img src="images/icon/phone.png"> 
-                Fax: +91-431-2500133<br></p>
+          <img src="images/icon/logo1.png" style="width: 200px" />
+          <div class="logo"></div>
+
+          <p class="rights-text">
+            Copyright © 2021 Created by Computer Application Department.
+          </p>
+          <br />
+          <p>
+            <img src="images/icon/location.png" /> National Institute of
+            Technology<br />Tiruchirappalli,Tamil Nadu INDIA
+          </p>
+          <br />
+          <p><img src="images/icon/phone.png" /> Fax: +91-431-2500133<br /></p>
         </div>
         <div class="right-col">
-            <h1 style="color: #fff">Online Courses</h1>
-            <div class="border"></div><br>
-            <p>We innovate Learning Processes.</p>
-            
+          <h1 style="color: #fff">Online Courses</h1>
+          <div class="border"></div>
+          <br />
+          <p>We innovate Learning Processes.</p>
         </div>
-    </div>
-</footer>
-</body>
+      </div>
+    </footer>
+  </body>
 </html>

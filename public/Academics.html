@@ -18,15 +18,12 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <header id="header">
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <nav class="top-nav">
-        <div class="logo"> <a href="/"><img src="images/icon/logo.png" alt="logo" /></a></div>
-        <input id="men-toggle" type="checkbox" />
-        <label class="men-button-container" for="men-toggle">
-          <div class="men-button"></div>
-        </label>
-        <ul class="men">
+    <header id="header" style="height: auto">
+      <nav>
+        <div class="logo">
+          <a href="/"><img src="images/icon/logo.png" alt="logo" /></a>
+        </div>
+        <ul>
           <li><a href="/">Home</a></li>
           <li><a href="Academics.html">Academics</a></li>
           <li><a href="Admission.html">Admission</a></li>
@@ -34,7 +31,32 @@
           <li><a href="about.html">About NITT</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
+        <!-- <a class="get-started" href="login.html">Register</a> -->
+        <img
+          src="images/icon/menu.png"
+          class="menu"
+          onclick="sideMenu(0)"
+          alt="menu"
+        />
       </nav>
+
+      <div class="side-menu" id="side-menu">
+        <div class="close" onclick="sideMenu(1)">
+          <img src="images/icon/close.png" alt="" />
+        </div>
+        <div class="user">
+          <!-- <img src="images/creator/roshan.jpeg" alt="Username"> -->
+          <p>user</p>
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="Academics.html">Academics</a></li>
+          <li><a href="Admission.html">Admission</a></li>
+          <li><a href="services.html">FAQ</a></li>
+          <li><a href="about.html">About NITT</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
     </header>
 
     <!-- <a class="get-started" href="register">Register</a> -->
@@ -72,8 +94,8 @@
         Tiruchirappalli.
       </p>
       <br />
-      <div">
-        <img src="images/icon/pic1.png" alt="structure" />
+      <div style="display: flex; justify-content: center">
+        <img src="images/icon/pic1.png" alt="structure" style="height: 30%; width: 30%">
       </div>
     </div>
 
@@ -784,7 +806,7 @@
         other organizations or industries.
       </li>
     </ul>
-
+    <script src="/js/script.js"></script>
     <footer>
       <div class="footer-container">
         <div class="left-col">

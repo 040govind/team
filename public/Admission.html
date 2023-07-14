@@ -23,8 +23,7 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 20px;
+        
       }
 
       h2 {
@@ -60,7 +59,7 @@
         margin-bottom: 20px;
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 960px) {
         body {
           padding: 10px;
         }
@@ -90,7 +89,7 @@
           <li><a href="about.html">About NITT</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
-        <!-- <a class="get-started" href="login">Register</a> -->
+        <!-- <a class="get-started" href="login.html">Register</a> -->
         <img
           src="images/icon/menu.png"
           class="menu"
@@ -98,6 +97,23 @@
           alt="menu"
         />
       </nav>
+
+      <div class="side-menu" id="side-menu">
+        <div class="close" onclick="sideMenu(1)">
+          <img src="images/icon/close.png" alt="" />
+        </div>
+        <div class="user">
+          <!-- <img src="images/creator/roshan.jpeg" alt="Username"> -->
+          <p>user</p>
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="Academics.html">Academics</a></li>
+          <li><a href="Admission.html">Admission</a></li>
+          <li><a href="services.html">FAQ</a></li>
+          <li><a href="about.html">About NITT</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
       </div>
     </header>
     <div class="level" style="margin-top: 160px">
@@ -177,10 +193,10 @@
         or<br />
         MCA from a recognized institution.<br />
         This program is open to all working IT professionals or employees in
-        different teaching and research organizations. Non-working enthusiastic
-        job seekers are also eligible for this program.
+        different teaching and research organizations.
       </p>
     </div>
+    <script src="/js/script.js"></script>
     <!-- FOOTER -->
     <footer>
       <div class="footer-container">

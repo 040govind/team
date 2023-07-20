@@ -1,0 +1,52 @@
+
+body {
+  font-family: Arial, sans-serif;
+  
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #898282;
+}
+
+.bullet-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.eligibility-paragraph {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  .bullet-list {
+    font-size: 12px;
+  }
+}
